@@ -110,8 +110,8 @@ fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
   brew install imagemagick
 
-fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew install qt
+#fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
+#  brew install qt
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brew install watch
@@ -216,6 +216,9 @@ fancy_echo "Installing Alfred"
 
 fancy_echo "Installing Google Chrome"
   installcask google-chrome
+
+fancy_echo "Installing Airmail, for all the mailz"
+  installcask airmail-beta
 
 fancy_echo "Installing Bartender to wrangle the menubar"
   installcask bartender
