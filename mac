@@ -28,6 +28,22 @@ fancy_echo() {
 }
 ### end common-components/shared-functions
 
+if [[ ! -f /usr/local/bin/brew ]]; then
+  fancy_echo "Installing Homebrew, a good OS X package manager ..."
+    ruby <(curl -fsSL https://raw.github.com/mxcl/homebrew/go)
+fi
+
+fancy_echo "Updating Homebrew ..."
+  brew update
+
+if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
+  fancy_echo "Put Homebrew location earlier in PATH ..."
+    echo "\n# recommended by brew doctor" >> ~/.zshrc
+    echo "export PATH='/usr/local/bin:$PATH'\n" >> ~/.zshrc
+    source ~/.zshrc
+fi
+### end mac-components/homebrew
+
 fancy_echo "Installilng Zsh 5.0.2 ..."
   brew install --disable-etcdir zsh
 
@@ -51,22 +67,6 @@ fi
 fancy_echo "Checking for SSH key, generating one if it doesn't exist ..."
   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
   ### end mac-components/ssh-key
-
-if [[ ! -f /usr/local/bin/brew ]]; then
-  fancy_echo "Installing Homebrew, a good OS X package manager ..."
-    ruby <(curl -fsSL https://raw.github.com/mxcl/homebrew/go)
-fi
-
-fancy_echo "Updating Homebrew ..."
-  brew update
-
-if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
-  fancy_echo "Put Homebrew location earlier in PATH ..."
-    echo "\n# recommended by brew doctor" >> ~/.zshrc
-    echo "export PATH='/usr/local/bin:$PATH'\n" >> ~/.zshrc
-    source ~/.zshrc
-fi
-### end mac-components/homebrew
 
 fancy_echo "Installing GNU Compiler Collection, a necessary prerequisite to installing Ruby ..."
   brew tap homebrew/dupes
