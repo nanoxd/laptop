@@ -1,3 +1,6 @@
+fancy_echo "Install wget with I18n URI support"
+  brew install wget --enable-iri
+
 fancy_echo "Installing Postgres, a good open source relational database ..."
   brew install postgres
   initdb /usr/local/var/postgres -E utf8
@@ -7,6 +10,9 @@ fancy_echo "Installing Redis, a good key-value database ..."
 
 fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
   brew install the_silver_searcher
+
+fancy_echo "Installing ack, just in case"
+  brew install ack
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
   brew install vim
@@ -29,8 +35,19 @@ fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integ
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brew install watch
 
+fancy_echo "Installing tree, a recursive directory listing"
+  brew install tree
+
 fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
   brew install graphviz
   brew install npm --deps
   curl get.pow.cx | sh
 
+fancy_echo "Installing Mosh, a mobile shell"
+  brew install mosh
+
+fancy_echo "Install htop, a TUI for top"
+  brew install htop
+
+fancy_echo "Installing youtube-dl for video downloads"
+  brew install youtube-dl

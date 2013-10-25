@@ -1,2 +1,5 @@
-fancy_echo "Installing git, Node.js, hub..."
-  brew install git git-extras git-flow node hub
+fancy_echo "Installing git, hub, mercurial, Node.js..."
+  brew install git git-extras git-flow hub mercurial node
+
+fancy_echo "Installing tig, a pretty log viewer"
+  brew install tig
