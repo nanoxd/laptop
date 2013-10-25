@@ -162,6 +162,9 @@ fancy_echo "Linking local bin folder"
 fancy_echo "Installing RVM, to change Ruby versions ..."
   curl -L https://get.rvm.io | bash -s stable
 
+fancy_echo "Sourcing RVM"
+  source ~/.rvm/scripts/rvm
+
 fancy_echo "Installing Ruby 2.0.0"
   rvm install 2.0.0
 
