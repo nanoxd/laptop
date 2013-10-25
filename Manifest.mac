@@ -10,9 +10,8 @@ mac-components/compiler-and-libraries
 mac-components/python
 mac-components/git
 mac-components/packages
-mac-components/rbenv
+mac-components/rvm
 mac-components/languages
-common-components/ruby-environment
 mac-components/pg
 mac-components/heroku
 mac-components/npm-environment

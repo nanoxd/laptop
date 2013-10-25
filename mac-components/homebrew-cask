@@ -1,6 +1,7 @@
 fancy_echo "Tapping into homebrew-cask"
   brew tap phinze/homebrew-cask
   brew install brew-cask
+  brew update
 
 function installcask() {
   brew cask install "${@}" 2> /dev/null

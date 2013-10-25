@@ -1,0 +1,20 @@
+fancy_echo "Installing RVM, to change Ruby versions ..."
+  curl -L https://get.rvm.io | bash -s stable
+
+fancy_echo "Installing Ruby 2.0.0"
+  rvm install 2.0.0
+
+fancy_echo "Installing Ruby 1.9.3"
+  rvm install 1.9.3"
+
+fancy_echo "Installing Rubinius 2.0.0"
+  rvm install rbx-2.0.0
+
+fancy_echo "Setting Ruby 2.0.0 as default version"
+  rvm use 2.0.0 --default
+
+fancy_echo "Updating to latest Rubygems version"
+  gem update --system
+
+fancy_echo "Installing critical Ruby gems"
+  rvm @global do gem install gem-ctags teamocil rails jazz_hands
