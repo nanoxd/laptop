@@ -1,4 +1,4 @@
-Laptop
+Nano's Laptop
 ======
 
 Laptop is a script to set up a Mac OS X or Linux laptop for Rails development.
@@ -10,11 +10,8 @@ Requirements
 
 1) Install a C compiler.
 
-Use [OS X GCC Installer](https://github.com/kennethreitz/osx-gcc-installer/) for
-Snow Leopard (OS X 10.6).
-
 Use [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action)
-for Lion (OS X 10.7) or Mountain Lion (OS X 10.8).
+for Lion (OS X 10.7), Mountain Lion (OS X 10.8), Mavericks (OS X 10.9)
 
 2) Set zsh as your login shell:
 
@@ -32,7 +29,7 @@ We support:
 
 1) Install zsh and set it as your login shell:
 
-    bash <(wget -qO- https://raw.github.com/thoughtbot/laptop/master/linux-prerequisites)
+    bash <(wget -qO- https://raw.github.com/NanoXD/laptop/master/linux-prerequisites)
 
 Install
 -------
@@ -41,13 +38,13 @@ Install
 
 Read, then run the script:
 
-    zsh <(curl -s https://raw.github.com/thoughtbot/laptop/master/mac)
+    zsh <(curl -s https://raw.github.com/NanoXD/laptop/master/mac)
 
 ### Linux
 
 Read, then run the script:
 
-    zsh <(wget -qO- https://raw.github.com/thoughtbot/laptop/master/linux)
+    zsh <(wget -qO- https://raw.github.com/NanoXD/laptop/master/linux)
 
 What it sets up
 ---------------
@@ -72,7 +69,7 @@ What it sets up
 * Tmux for saving project state and switching between projects
 * Watch for periodically executing a program and displaying the output
 
-It should take less than 15 minutes to install (depends on your machine).
+It should take less than 45 minutes to install (depends on your machine).
 
 Credits
 -------
