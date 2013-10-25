@@ -1,0 +1,75 @@
+fancy_echo "Tapping into homebrew-cask"
+  brew tap phinze/homebrew-cask
+  brew install brew-cask
+
+function installcask() {
+  brew cask install "${@}" 2> /dev/null
+}
+
+fancy_echo "Installing Dropbox"
+  installcask dropbox
+
+fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
+  installcask pc-keyboardhack
+  installcask keyremap4macbook
+
+fancy_echo "Installing iTerm2, a better terminal experience"
+  installcask iterm2
+
+fancy_echo "Installing Alfred"
+  installcask alfred
+
+fancy_echo "Installing Google Chrome"
+  installcask google-chrome
+
+fancy_echo "Installing Bartender to wrangle the menubar"
+  installcask bartender
+
+fancy_echo "Installing Postgres.app"
+  installcask postgres
+
+fancy_echo "Installing Virtualbox"
+  installcask virtualbox
+
+fancy_echo "Installing Vagrant to manage dev environments"
+  installcask vagrant
+
+fancy_echo "Installing CloudApp"
+  installcask cloudapp
+
+fancy_echo "Installing AppDelete"
+  installcask app-delete
+
+fancy_echo "Installing Doxie drivers"
+  installcask doxie
+
+fancy_echo "Installing Evernote for notes"
+  installcask evernote
+
+fancy_echo "Installing Google Hangouts"
+  installcask google-hangouts
+
+fancy_echo "Installing Instacast, a podcast manager"
+  installcask instacast
+
+fancy_echo "Installing Racket"
+  installcask racket
+
+fancy_echo "Installing Rdio"
+  installcask rdio
+
+fancy_echo "Installing Skype"
+  installcask skype
+
+fancy_echo "Installing Sourcetree"
+  installcask sourcetree
+
+fancy_echo "Installing Sublime Text 3"
+  installcask sublime-text-3
+
+fancy_echo "Installing The Unarchiver"
+  installcask the-unarchiver
+
+fancy_echo "Installing TrueCrypt"
+  installcask true-crypt
+

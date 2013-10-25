@@ -16,3 +16,4 @@ common-components/ruby-environment
 mac-components/pg
 mac-components/heroku
 mac-components/npm-environment
+mac-components/homebrew-cask

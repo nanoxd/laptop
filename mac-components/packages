@@ -1,10 +1,6 @@
 fancy_echo "Install wget with I18n URI support"
   brew install wget --enable-iri
 
-fancy_echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres
-  initdb /usr/local/var/postgres -E utf8
-
 fancy_echo "Installing Redis, a good key-value database ..."
   brew install redis
 
@@ -46,7 +42,7 @@ fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
 fancy_echo "Installing Mosh, a mobile shell"
   brew install mosh
 
-fancy_echo "Install htop, a TUI for top"
+fancy_echo "Installing htop, a TUI for top"
   brew install htop
 
 fancy_echo "Installing youtube-dl for video downloads"

@@ -45,7 +45,7 @@ fi
 ### end mac-components/homebrew
 
 fancy_echo "Installilng Zsh 5.0.2 ..."
-  brew install --disable-etcdir zsh
+  brew install zsh libmpdclient
 
 fancy_echo "Adding /usr/local/bin/zsh to /etc/shells (Will require administrative password)"
   echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
@@ -55,7 +55,6 @@ fancy_echo "Changing default login shell to /usr/local/bin/zsh (Will require adm
 
 fancy_echo "Installing Prezto, some terrific extensions to zsh ... "
   curl -L https://github.com/NanoXD/prezto/raw/master/install.zsh | zsh
-  
 ### end mac-components/prezto
 
 fancy_echo "Checking for SSH key, generating one if it doesn't exist ..."
@@ -77,19 +76,24 @@ fancy_echo "Updating setup tools ..."
   pip install --upgrade pip
 ### end mac-components/python
 
-fancy_echo "Installing git, Node.js, hub..."
-  brew install git git-extras git-flow node hub
+fancy_echo "Installing git, hub, mercurial, Node.js..."
+  brew install git git-extras git-flow hub mercurial node
+
+fancy_echo "Installing tig, a pretty log viewer"
+  brew install tig
 ### end mac-components/git
 
-fancy_echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres
-  initdb /usr/local/var/postgres -E utf8
+fancy_echo "Install wget with I18n URI support"
+  brew install wget --enable-iri
 
 fancy_echo "Installing Redis, a good key-value database ..."
   brew install redis
 
 fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
   brew install the_silver_searcher
+
+fancy_echo "Installing ack, just in case"
+  brew install ack
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
   brew install vim
@@ -112,11 +116,22 @@ fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integ
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brew install watch
 
+fancy_echo "Installing tree, a recursive directory listing"
+  brew install tree
+
 fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
   brew install graphviz
   brew install npm --deps
   curl get.pow.cx | sh
 
+fancy_echo "Installing Mosh, a mobile shell"
+  brew install mosh
+
+fancy_echo "Installing htop, a TUI for top"
+  brew install htop
+
+fancy_echo "Installing youtube-dl for video downloads"
+  brew install youtube-dl
 ### end mac-components/packages
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
@@ -137,6 +152,14 @@ fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up bina
 fancy_echo "Installing ruby-build, to install Rubies ..."
   brew install ruby-build
 ### end mac-components/rbenv
+
+fancy_echo "Installing go"
+  brew install go
+
+fancy_echo "Installing Elixir, a functional programming language"
+  brew install erlang
+  brew install elixir
+### end mac-components/languages
 
 fancy_echo "Installing Ruby 2.0.0-p247 ..."
   rbenv install 2.0.0-p247
@@ -165,4 +188,81 @@ fancy_echo "Installing the heroku-config plugin to pull config variables locally
 
 fancy_echo "Installing essential NPM packages - Grunt, Yeoman, and Bower, because you need them ..."
   npm install -g yo grunt-cli bower npm-check-updates### end mac-components/npm-environment
+
+fancy_echo "Tapping into homebrew-cask"
+  brew tap phinze/homebrew-cask
+  brew install brew-cask
+
+function installcask() {
+  brew cask install "${@}" 2> /dev/null
+}
+
+fancy_echo "Installing Dropbox"
+  installcask dropbox
+
+fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
+  installcask pc-keyboardhack
+  installcask keyremap4macbook
+
+fancy_echo "Installing iTerm2, a better terminal experience"
+  installcask iterm2
+
+fancy_echo "Installing Alfred"
+  installcask alfred
+
+fancy_echo "Installing Google Chrome"
+  installcask google-chrome
+
+fancy_echo "Installing Bartender to wrangle the menubar"
+  installcask bartender
+
+fancy_echo "Installing Postgres.app"
+  installcask postgres
+
+fancy_echo "Installing Virtualbox"
+  installcask virtualbox
+
+fancy_echo "Installing Vagrant to manage dev environments"
+  installcask vagrant
+
+fancy_echo "Installing CloudApp"
+  installcask cloudapp
+
+fancy_echo "Installing AppDelete"
+  installcask app-delete
+
+fancy_echo "Installing Doxie drivers"
+  installcask doxie
+
+fancy_echo "Installing Evernote for notes"
+  installcask evernote
+
+fancy_echo "Installing Google Hangouts"
+  installcask google-hangouts
+
+fancy_echo "Installing Instacast, a podcast manager"
+  installcask instacast
+
+fancy_echo "Installing Racket"
+  installcask racket
+
+fancy_echo "Installing Rdio"
+  installcask rdio
+
+fancy_echo "Installing Skype"
+  installcask skype
+
+fancy_echo "Installing Sourcetree"
+  installcask sourcetree
+
+fancy_echo "Installing Sublime Text 3"
+  installcask sublime-text-3
+
+fancy_echo "Installing The Unarchiver"
+  installcask the-unarchiver
+
+fancy_echo "Installing TrueCrypt"
+  installcask true-crypt
+
+### end mac-components/homebrew-cask
 
