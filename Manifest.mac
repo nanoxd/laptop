@@ -5,7 +5,6 @@ common-components/check-home-bin
 common-components/shared-functions
 mac-components/homebrew
 mac-components/prezto
-mac-components/zsh-fix
 mac-components/ssh-key
 mac-components/compiler-and-libraries
 mac-components/python

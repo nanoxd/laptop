@@ -8,5 +8,5 @@ fancy_echo "Changing default login shell to /usr/local/bin/zsh (Will require adm
   chsh -s /usr/local/bin/zsh
 
 fancy_echo "Installing Prezto, some terrific extensions to zsh ... "
-  curl -L https://github.com/NanoXD/prezto/raw/master/install.sh | sh
+  curl -L https://github.com/NanoXD/prezto/raw/master/install.zsh | zsh
   
