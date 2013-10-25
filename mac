@@ -134,6 +134,19 @@ fancy_echo "Installing youtube-dl for video downloads"
   brew install youtube-dl
 ### end mac-components/packages
 
+fancy_echo "Pulling dotfiles"
+  mkdir -p ~/Developer/{Automation,Code,OSS,Projects}
+  git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
+
+fancy_echo "Linking dotfiles"
+  for dotfile in "${ZDOTDIR:-$HOME}"/Developer/Code/nanofiles/.{ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,vimrc}; do
+    ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/${dotfile:t}"
+  done
+
+fancy_echo "Linking local bin folder"
+  ln -Fs ~/Developer/Code/nanofiles/bin ~/bin
+### end common-components/dotfiles
+
 fancy_echo "Installing RVM, to change Ruby versions ..."
   curl -L https://get.rvm.io | bash -s stable
 
