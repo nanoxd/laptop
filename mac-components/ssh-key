@@ -1,3 +1,11 @@
 fancy_echo "Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
-  
+  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa -C "nano@fdp.io"
+
+fancy_echo "Adding SSH Key to authentication agent"
+  ssh-add ~/.ssh/id_rsa
+
+fancy_echo "Copying SSH key to clipboard"
+  pbcopy < ~/.ssh/id_rsa.pub
+
+fancy_echo "Opening browser to add SSH key to Github"
+  open "https://github.com/settings/ssh"
