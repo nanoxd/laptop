@@ -77,3 +77,6 @@ fancy_echo "Installing The Unarchiver"
 fancy_echo "Installing TrueCrypt"
   installcask true-crypt
 
+fancy_echo "Installing Inboard, a screenshot manager"
+  installcask inboard
+

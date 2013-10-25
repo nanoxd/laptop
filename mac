@@ -271,5 +271,92 @@ fancy_echo "Installing The Unarchiver"
 fancy_echo "Installing TrueCrypt"
   installcask true-crypt
 
+fancy_echo "Installing Inboard, a screenshot manager"
+  installcask inboard
+
 ### end mac-components/homebrew-cask
+
+fancy_echo "Select a name for your computer:"
+  read comp_name
+  sudo scutil --set ComputerName "$comp_name"
+  sudo scutil --set HostName "$comp_name"
+  sudo scutil --set LocalHostName "$comp_name"
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$comp_name"
+
+fancy_echo "Enable access for assistive devices"
+  sudo touch /private/var/db/.AccessibilityAPIEnabled
+
+fancy_echo "Expand save panel by default"
+  defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+fancy_echo "Save to disk (not to iCloud) by default"
+  defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+fancy_echo "Disable the 'Are you sure you want to open this application?' dialog"
+  defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+fancy_echo "Trackpad: enable tap to click for this user and for the login screen"
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+  defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+  defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+fancy_echo "Increase sound quality for Bluetooth headphones/headsets"
+  defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+fancy_echo "Enable full keyboard access for all controls"
+  defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+fancy_echo "Set a blazingly fast keyboard repeat rate"
+  defaults write NSGlobalDomain KeyRepeat -int 0
+
+fancy_echo "Enable subpixel font rendering on non-Apple LCDs"
+  defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+fancy_echo "Show icons for hard drives, servers, and removable media on the desktop"
+  defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+  defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+  defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+  defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+fancy_echo "Finder: allow text selection in Quick Look"
+  defaults write com.apple.finder QLEnableTextSelection -bool true
+
+fancy_echo "Avoid creating .DS_Store files on network volumes"
+  defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+fancy_echo "Empty Trash securely by default"
+  defaults write com.apple.finder EmptyTrashSecurely -bool true
+
+fancy_echo "Set the icon size of Dock items to 36 pixels"
+  defaults write com.apple.dock tilesize -int 36
+
+fancy_echo "Automatically hide and show the Dock"
+  defaults write com.apple.dock autohide -bool true
+
+fancy_echo "Set Safari’s home page to `about:blank` for faster loading"
+  defaults write com.apple.Safari HomePage -string "about:blank"
+
+fancy_echo "Enable Safari’s debug menu"
+  defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+fancy_echo "Make Safari’s search banners default to Contains instead of Starts With"
+  defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+
+fancy_echo "Enable the Develop menu and the Web Inspector in Safari"
+  defaults write com.apple.Safari IncludeDevelopMenu -bool true
+  defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+fancy_echo "Add a context menu item for showing the Web Inspector in web views"
+  defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+fancy_echo "Killing Affected applications"
+for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" \
+  "Mail" "Safari"  "SystemUIServer" "Terminal" "iCal"; do
+  killall "$app" > /dev/null 2>&1
+done
+
+echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+### end mac-components/default-settings
 

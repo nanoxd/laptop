@@ -17,3 +17,4 @@ mac-components/pg
 mac-components/heroku
 mac-components/npm-environment
 mac-components/homebrew-cask
+mac-components/default-settings
