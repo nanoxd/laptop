@@ -2,7 +2,6 @@ common-components/zsh-shebang
 common-components/header
 common-components/exit-trap
 common-components/shared-functions
-common-components/dotfiles
 mac-components/rbenv
 mac-components/languages
 common-components/ruby-environment

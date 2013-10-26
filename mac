@@ -136,8 +136,7 @@ fancy_echo "Installing tree, a recursive directory listing"
 
 fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
   brew install graphviz
-  brew install npm --deps
-  curl get.pow.cx | sh
+  #curl get.pow.cx | sh
 
 fancy_echo "Installing Mosh, a mobile shell"
   brew install mosh
