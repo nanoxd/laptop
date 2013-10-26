@@ -2,5 +2,5 @@ fancy_echo "Installing go"
   brew install go
 
 fancy_echo "Installing Elixir, a functional programming language"
-  brew install erlang
+  brew install -v erlang
   brew install elixir

@@ -19,10 +19,11 @@ fancy_echo() {
 ### end common-components/shared-functions
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
-  brew reinstall rbenv
+  brew install rbenv
 
   if ! grep -qs "rbenv init" ~/.zshrc; then
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+    fancy_echo "I made it"
 
     fancy_echo "Enable shims and autocompletion ..."
       eval "$(rbenv init -)"
@@ -52,7 +53,7 @@ fancy_echo "Installing go"
   brew install go
 
 fancy_echo "Installing Elixir, a functional programming language"
-  brew install erlang
+  brew install -v erlang
   brew install elixir
 ### end mac-components/languages
 
@@ -60,7 +61,7 @@ fancy_echo "Installing Ruby 2.0.0-p247 ..."
   rbenv install 2.0.0-p247
 
 fancy_echo "Installing Ruby 1.9.3"
-  rbenv install 1.9.3"-p448
+  rbenv install 1.9.3-p448
 
 fancy_echo "Installing Rubinius 2.0.0"
   rbenv install rbx-2.1.1
@@ -253,7 +254,7 @@ fancy_echo "Add a context menu item for showing the Web Inspector in web views"
 
 fancy_echo "Killing Affected applications"
   for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" \
-    "Mail" "Safari"  "SystemUIServer" "Terminal" "iCal"; do
+    "Mail" "Safari"  "SystemUIServer" "iCal"; do
     killall "$app" > /dev/null 2>&1
   done
 

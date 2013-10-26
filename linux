@@ -121,7 +121,7 @@ fancy_echo "Installing Ruby 2.0.0-p247 ..."
   rbenv install 2.0.0-p247
 
 fancy_echo "Installing Ruby 1.9.3"
-  rbenv install 1.9.3"-p448
+  rbenv install 1.9.3-p448
 
 fancy_echo "Installing Rubinius 2.0.0"
   rbenv install rbx-2.1.1
