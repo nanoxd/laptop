@@ -3,8 +3,9 @@ common-components/header
 common-components/exit-trap
 common-components/shared-functions
 common-components/dotfiles
-mac-components/rvm
+mac-components/rbenv
 mac-components/languages
+common-components/ruby-environment
 mac-components/pg
 mac-components/heroku
 mac-components/npm-environment

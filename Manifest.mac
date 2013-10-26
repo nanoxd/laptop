@@ -11,8 +11,9 @@ mac-components/python
 mac-components/git
 mac-components/packages
 common-components/dotfiles
-mac-components/rvm
+mac-components/rbenv
 mac-components/languages
+common-components/ruby-environment
 mac-components/pg
 mac-components/heroku
 mac-components/npm-environment

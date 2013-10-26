@@ -1,3 +1,5 @@
+export HOMEBREW_CASK_OPTS=--appdir=/Applications
+
 fancy_echo "Tapping into homebrew-cask"
   brew tap phinze/homebrew-cask
   brew install brew-cask

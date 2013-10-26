@@ -120,6 +120,12 @@ fancy_echo "Installing ruby-build, to install Rubies ..."
 fancy_echo "Installing Ruby 2.0.0-p247 ..."
   rbenv install 2.0.0-p247
 
+fancy_echo "Installing Ruby 1.9.3"
+  rbenv install 1.9.3"-p448
+
+fancy_echo "Installing Rubinius 2.0.0"
+  rbenv install rbx-2.1.1
+
 fancy_echo "Setting Ruby 2.0.0-p247 as global default Ruby ..."
   rbenv global 2.0.0-p247
   rbenv rehash
@@ -128,7 +134,7 @@ fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install bundler rails compass bourbon neat unicorn --no-document
+  gem install bundler gem-ctags teamocil rails jazz_hands
 ### end common-components/ruby-environment
 
 fancy_echo "Installing Heroku CLI client ..."
