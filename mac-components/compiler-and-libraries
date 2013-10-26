@@ -1,5 +1,2 @@
-fancy_echo "Installing CMake, a cross-platform Make"
-  brew install cmake
-
 fancy_echo "Upgrading and linking OpenSSL ..."
   brew install openssl

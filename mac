@@ -79,9 +79,6 @@ fancy_echo "Opening browser to add SSH key to Github"
   open "https://github.com/settings/ssh"
 ### end mac-components/ssh-key
 
-fancy_echo "Installing CMake, a cross-platform Make"
-  brew install cmake
-
 fancy_echo "Upgrading and linking OpenSSL ..."
   brew install openssl
 ### end mac-components/compiler-and-libraries
