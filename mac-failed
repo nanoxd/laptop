@@ -19,7 +19,7 @@ fancy_echo() {
 ### end common-components/shared-functions
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
-  brew install rbenv
+  brew install rbenv || brew reinstall rbenv
 
   if ! grep -qs "rbenv init" ~/.zshrc; then
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc

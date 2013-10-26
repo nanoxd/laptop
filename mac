@@ -164,7 +164,7 @@ fancy_echo "Linking local bin folder"
 ### end common-components/dotfiles
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
-  brew install rbenv
+  brew install rbenv || brew reinstall rbenv
 
   if ! grep -qs "rbenv init" ~/.zshrc; then
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc
