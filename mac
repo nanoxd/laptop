@@ -28,6 +28,12 @@ fancy_echo() {
 }
 ### end common-components/shared-functions
 
+if [[ -f /etc/zshenv ]]; then
+  fancy_echo "Fixing OSX zsh environment bug ..."
+    sudo mv /etc/{zshenv,zshrc}
+fi
+### end mac-components/zsh-fix
+
 fancy_echo "Disabling Gatekeeper"
   sudo spctl --master-disable
 
