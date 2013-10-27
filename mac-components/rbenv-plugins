@@ -1,16 +1,12 @@
 fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
-  brew install rbenv-gem-rehash
+  brewin rbenv-gem-rehash
 
 fancy_echo "Installing ruby-build, to install Rubies ..."
-  brew install ruby-build
+  brewin ruby-build
 
 fancy_echo "Installing rbenv-ctags"
-  if [ ! "$HOME/.rbenv/plugins/rbenv-ctags" ]; then
-    mkdir -p ~/.rbenv/plugins
-    git clone https://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
-  fi
+  mkdir -p ~/.rbenv/plugins
+  git clone https://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
 
 fancy_echo "Installing rbenv-update, a plugin manager"
-  if [ ! "$HOME/.rbenv/plugins/rbenv-update" ]; then
-    git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
-  fi
+  git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update

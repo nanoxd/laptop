@@ -5,7 +5,6 @@ common-components/shared-functions
 mac-components/rbenv-plugins
 mac-components/languages
 common-components/ruby-environment
-mac-components/pg
 mac-components/heroku
 mac-components/npm-environment
 mac-components/homebrew-cask

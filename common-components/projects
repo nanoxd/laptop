@@ -10,3 +10,12 @@ fancy_echo "Downloading Projects"
 
 fancy_echo "Downloading Automation Scripts"
   git clone git@github.com:NanoXD/laptop.git ~/Developer/Projects/laptop
+
+fancy_echo "Installing VMWare Fusion plugin for vagrant"
+  vagrant plugin install vagrant-vmware-fusion
+
+fancy_echo "Installing Vagrant Digital Ocean provider"
+  vagrant plugin install vagrant-digitalocean
+
+fancy_echo "Installing Vagrant pristine plugin"
+  vagrant plugin install vagrant-pristine

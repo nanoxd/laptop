@@ -1,5 +1,5 @@
 fancy_echo "Installing rbenv, to change Ruby versions ..."
-  brew install rbenv
+  brewin rbenv
 
   if ! grep -qs "rbenv init" ~/.zshrc; then
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc

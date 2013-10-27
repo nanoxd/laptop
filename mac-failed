@@ -27,29 +27,25 @@ function brewin() {
 ### end common-components/shared-functions
 
 fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
-  brew install rbenv-gem-rehash
+  brewin rbenv-gem-rehash
 
 fancy_echo "Installing ruby-build, to install Rubies ..."
-  brew install ruby-build
+  brewin ruby-build
 
 fancy_echo "Installing rbenv-ctags"
-  if [ ! "$HOME/.rbenv/plugins/rbenv-ctags" ]; then
-    mkdir -p ~/.rbenv/plugins
-    git clone https://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
-  fi
+  mkdir -p ~/.rbenv/plugins
+  git clone https://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
 
 fancy_echo "Installing rbenv-update, a plugin manager"
-  if [ ! "$HOME/.rbenv/plugins/rbenv-update" ]; then
-    git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
-  fi
+  git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
 ### end mac-components/rbenv-plugins
 
 fancy_echo "Installing go"
-  brew install go
+  brewin go
 
 fancy_echo "Installing Elixir, a functional programming language"
-  brew install -v erlang
-  brew install elixir
+  brewin erlang
+  brewin elixir
 ### end mac-components/languages
 
 fancy_echo "Installing Ruby 2.0.0-p247 ..."
@@ -58,7 +54,7 @@ fancy_echo "Installing Ruby 2.0.0-p247 ..."
 fancy_echo "Installing Ruby 1.9.3"
   rbenv install 1.9.3-p448
 
-# Currently fails to compile in Mavericks
+# Currently fails to compile on Mavericks
 #fancy_echo "Installing Rubinius 2.0.0"
   #rbenv install rbx-2.1.1
 
@@ -73,10 +69,6 @@ fancy_echo "Installing critical Ruby gems for Rails development ..."
   gem install bundler gem-ctags teamocil rails jazz_hands
 ### end common-components/ruby-environment
 
-fancy_echo "Installing pg gem with arch flags ..."
-  ARCHFLAGS="-arch x86_64" gem install pg
-### end mac-components/pg
-
 fancy_echo "Installing Heroku CLI client ..."
   brew install heroku-toolbelt
 
@@ -85,7 +77,7 @@ fancy_echo "Installing the heroku-config plugin to pull config variables locally
 ### end mac-components/heroku
 
 fancy_echo "Installing essential NPM packages - Grunt, Yeoman, and Bower, because you need them ..."
-  npm install -g coffee-script grunt-cli bower npm-check-updates jasmine jsonlint
+  npm install -g coffee-script grunt-cli npm-check-updates jasmine jsonlint
 ### end mac-components/npm-environment
 
 export HOMEBREW_CASK_OPTS=--appdir=/Applications
@@ -180,6 +172,15 @@ fancy_echo "Downloading Projects"
 
 fancy_echo "Downloading Automation Scripts"
   git clone git@github.com:NanoXD/laptop.git ~/Developer/Projects/laptop
+
+fancy_echo "Installing VMWare Fusion plugin for vagrant"
+  vagrant plugin install vagrant-vmware-fusion
+
+fancy_echo "Installing Vagrant Digital Ocean provider"
+  vagrant plugin install vagrant-digitalocean
+
+fancy_echo "Installing Vagrant pristine plugin"
+  vagrant plugin install vagrant-pristine
 ### end common-components/projects
 
 fancy_echo "Select a name for your computer:"

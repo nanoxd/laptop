@@ -1,6 +1,2 @@
-fancy_echo "Installing Python 2.7.5 ..."
-  brew install python
-
-fancy_echo "Updating setup tools ..."
-  pip install --upgrade setuptools
-  pip install --upgrade pip
+fancy_echo "Installing Python 3"
+  brewin python3
