@@ -26,6 +26,14 @@ fi
 fancy_echo() {
   printf "\n%b\n" "$1"
 }
+
+function installcask() {
+  brew cask install "${@}" 2> /dev/null
+}
+
+function brewin() {
+  brew install "${@}" 2> /dev/null
+}
 ### end common-components/shared-functions
 
 if [[ -f /etc/zshenv ]]; then
@@ -54,7 +62,10 @@ fi
 ### end mac-components/homebrew
 
 fancy_echo "Installilng Zsh 5.0.2 ..."
-  brew install zsh libmpdclient
+  brewin zsh
+
+fancy_echo "Installing libmpdclient for Tmux"
+  brewin libmpdclient
 
 fancy_echo "Adding /usr/local/bin/zsh to /etc/shells (Will require administrative password)"
   echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
@@ -92,67 +103,65 @@ fancy_echo "Updating setup tools ..."
 ### end mac-components/python
 
 fancy_echo "Installing git, hub, mercurial, Node.js..."
-  brew install git git-extras git-flow hub node
+  brewin git git-extras git-flow hub node
 
 fancy_echo "Installing tig, a pretty log viewer"
-  brew install tig
+  brewin tig
 ### end mac-components/git
 
 fancy_echo "Install wget with I18n URI support"
-  brew install wget --enable-iri
+  brewin wget --enable-iri
 
 fancy_echo "Installing Redis, a good key-value database ..."
-  brew install redis
+  brewin redis
 
 fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
-  brew install the_silver_searcher
+  brewin the_silver_searcher
 
 fancy_echo "Installing ack, just in case"
-  brew install ack
+  brewin ack
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brew install vim
+  brewin macvim --override-system-vim
 
 fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
-  brew install ctags
+  brewin ctags
 
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
-  brew install tmux
+  brewin tmux
 
 fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
-  brew install reattach-to-user-namespace
+  brewin reattach-to-user-namespace
 
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brew install imagemagick
+  brewin imagemagick
 
 #fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-#  brew install qt
+#  brewin qt
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew install watch
+  brewin watch
 
 fancy_echo "Installing tree, a recursive directory listing"
-  brew install tree
+  brewin tree
 
 fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
-  brew install graphviz
+  brewin graphviz
   #curl get.pow.cx | sh
 
 fancy_echo "Installing Mosh, a mobile shell"
-  brew install mosh
+  brewin mosh
 
 fancy_echo "Installing htop, a TUI for top"
-  brew install htop
+  brewin htop
 
 fancy_echo "Installing youtube-dl for video downloads"
-  brew install youtube-dl
+  brewin youtube-dl
 ### end mac-components/packages
 
 fancy_echo "Pulling dotfiles"
-  if [ ! "$HOME/Developer/" ]; then
-    mkdir -p ~/Developer/{Automation,Code,OSS,Projects}
-    git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
-  fi
+  mkdir -p ~/Developer/{Automation,Code,OSS,Projects}
+  git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
 
 fancy_echo "Linking dotfiles"
   for dotfile in "${ZDOTDIR:-$HOME}"/Developer/Code/nanofiles/.{ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,vimrc}; do
@@ -164,6 +173,9 @@ fancy_echo "Linking local bin folder"
 
 fancy_echo "Opening Powerline fonts"
   open ~/Developer/Code/nanofiles/powerline-fonts/UbuntuMono/*.ttf
+
+fancy_echo "Installing vundle, a package manager for VIM"
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ### end common-components/dotfiles
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
@@ -211,8 +223,9 @@ fancy_echo "Installing Ruby 2.0.0-p247 ..."
 fancy_echo "Installing Ruby 1.9.3"
   rbenv install 1.9.3-p448
 
-fancy_echo "Installing Rubinius 2.0.0"
-  rbenv install rbx-2.1.1
+# Currently fails to compile in Mavericks
+#fancy_echo "Installing Rubinius 2.0.0"
+  #rbenv install rbx-2.1.1
 
 fancy_echo "Setting Ruby 2.0.0-p247 as global default Ruby ..."
   rbenv global 2.0.0-p247
@@ -244,12 +257,9 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"
   brew tap phinze/homebrew-cask
-  brew install brew-cask
+  brewin brew-cask
   brew update
 
-function installcask() {
-  brew cask install "${@}" 2> /dev/null
-}
 
 fancy_echo "Installing Dropbox"
   installcask dropbox
@@ -275,9 +285,6 @@ fancy_echo "Installing Bartender to wrangle the menubar"
 
 fancy_echo "Installing Postgres.app"
   installcask postgres
-
-fancy_echo "Installing Virtualbox"
-  installcask virtualbox
 
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant

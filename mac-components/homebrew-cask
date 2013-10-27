@@ -2,12 +2,9 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"
   brew tap phinze/homebrew-cask
-  brew install brew-cask
+  brewin brew-cask
   brew update
 
-function installcask() {
-  brew cask install "${@}" 2> /dev/null
-}
 
 fancy_echo "Installing Dropbox"
   installcask dropbox
@@ -33,9 +30,6 @@ fancy_echo "Installing Bartender to wrangle the menubar"
 
 fancy_echo "Installing Postgres.app"
   installcask postgres
-
-fancy_echo "Installing Virtualbox"
-  installcask virtualbox
 
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant

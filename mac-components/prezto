@@ -1,5 +1,8 @@
 fancy_echo "Installilng Zsh 5.0.2 ..."
-  brew install zsh libmpdclient
+  brewin zsh
+
+fancy_echo "Installing libmpdclient for Tmux"
+  brewin libmpdclient
 
 fancy_echo "Adding /usr/local/bin/zsh to /etc/shells (Will require administrative password)"
   echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells

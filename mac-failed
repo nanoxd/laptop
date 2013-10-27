@@ -16,6 +16,14 @@ set -e
 fancy_echo() {
   printf "\n%b\n" "$1"
 }
+
+function installcask() {
+  brew cask install "${@}" 2> /dev/null
+}
+
+function brewin() {
+  brew install "${@}" 2> /dev/null
+}
 ### end common-components/shared-functions
 
 fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
@@ -50,8 +58,9 @@ fancy_echo "Installing Ruby 2.0.0-p247 ..."
 fancy_echo "Installing Ruby 1.9.3"
   rbenv install 1.9.3-p448
 
-fancy_echo "Installing Rubinius 2.0.0"
-  rbenv install rbx-2.1.1
+# Currently fails to compile in Mavericks
+#fancy_echo "Installing Rubinius 2.0.0"
+  #rbenv install rbx-2.1.1
 
 fancy_echo "Setting Ruby 2.0.0-p247 as global default Ruby ..."
   rbenv global 2.0.0-p247
@@ -83,12 +92,9 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"
   brew tap phinze/homebrew-cask
-  brew install brew-cask
+  brewin brew-cask
   brew update
 
-function installcask() {
-  brew cask install "${@}" 2> /dev/null
-}
 
 fancy_echo "Installing Dropbox"
   installcask dropbox
@@ -114,9 +120,6 @@ fancy_echo "Installing Bartender to wrangle the menubar"
 
 fancy_echo "Installing Postgres.app"
   installcask postgres
-
-fancy_echo "Installing Virtualbox"
-  installcask virtualbox
 
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant

@@ -1,8 +1,6 @@
 fancy_echo "Pulling dotfiles"
-  if [ ! "$HOME/Developer/" ]; then
-    mkdir -p ~/Developer/{Automation,Code,OSS,Projects}
-    git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
-  fi
+  mkdir -p ~/Developer/{Automation,Code,OSS,Projects}
+  git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
 
 fancy_echo "Linking dotfiles"
   for dotfile in "${ZDOTDIR:-$HOME}"/Developer/Code/nanofiles/.{ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,vimrc}; do
@@ -14,3 +12,6 @@ fancy_echo "Linking local bin folder"
 
 fancy_echo "Opening Powerline fonts"
   open ~/Developer/Code/nanofiles/powerline-fonts/UbuntuMono/*.ttf
+
+fancy_echo "Installing vundle, a package manager for VIM"
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle

@@ -1,48 +1,48 @@
 fancy_echo "Install wget with I18n URI support"
-  brew install wget --enable-iri
+  brewin wget --enable-iri
 
 fancy_echo "Installing Redis, a good key-value database ..."
-  brew install redis
+  brewin redis
 
 fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
-  brew install the_silver_searcher
+  brewin the_silver_searcher
 
 fancy_echo "Installing ack, just in case"
-  brew install ack
+  brewin ack
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brew install vim
+  brewin macvim --override-system-vim
 
 fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
-  brew install ctags
+  brewin ctags
 
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
-  brew install tmux
+  brewin tmux
 
 fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
-  brew install reattach-to-user-namespace
+  brewin reattach-to-user-namespace
 
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brew install imagemagick
+  brewin imagemagick
 
 #fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-#  brew install qt
+#  brewin qt
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew install watch
+  brewin watch
 
 fancy_echo "Installing tree, a recursive directory listing"
-  brew install tree
+  brewin tree
 
 fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
-  brew install graphviz
+  brewin graphviz
   #curl get.pow.cx | sh
 
 fancy_echo "Installing Mosh, a mobile shell"
-  brew install mosh
+  brewin mosh
 
 fancy_echo "Installing htop, a TUI for top"
-  brew install htop
+  brewin htop
 
 fancy_echo "Installing youtube-dl for video downloads"
-  brew install youtube-dl
+  brewin youtube-dl
