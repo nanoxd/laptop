@@ -13,6 +13,7 @@ mac-components/git
 mac-components/packages
 common-components/dotfiles
 mac-components/rbenv
+mac-components/rbenv-plugins
 mac-components/languages
 common-components/ruby-environment
 mac-components/pg
