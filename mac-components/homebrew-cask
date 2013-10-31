@@ -76,3 +76,8 @@ fancy_echo "Installing TrueCrypt"
 fancy_echo "Installing Inboard, a screenshot manager"
   installcask inboard
 
+fancy_echo "Installing Anvil, a menubar app for managing local websites"
+  installcask anvil
+
+fancy_echo "Installing HockeyCoach, an application for Hockey"
+  installcask hockey-coach
