@@ -117,6 +117,9 @@ fancy_echo "Installing The Silver Searcher (better than ack or grep) to search t
 fancy_echo "Installing ack, just in case"
   brewin ack
 
+fancy_echo "Installing CMake"
+  brewin cmake
+
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
   brewin macvim --override-system-vim
 
@@ -132,8 +135,8 @@ fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
   brewin imagemagick
 
-#fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-#  brewin qt
+fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
+ brewin qt
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brewin watch
@@ -143,7 +146,7 @@ fancy_echo "Installing tree, a recursive directory listing"
 
 fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
   brewin graphviz
-  #curl get.pow.cx | sh
+  curl get.pow.cx | sh
 
 fancy_echo "Installing Mosh, a mobile shell"
   brewin mosh
@@ -153,6 +156,12 @@ fancy_echo "Installing htop, a TUI for top"
 
 fancy_echo "Installing youtube-dl for video downloads"
   brewin youtube-dl
+
+fancy_echo "Installing ifstat, a tool for network interfaces"
+  brewin ifstat
+
+fancy_echo "Installing GNU grep"
+  brewin https://raw.github.com/Homebrew/homebrew-dupes/master/grep.rb
 ### end mac-components/packages
 
 fancy_echo "Pulling dotfiles"
@@ -322,6 +331,11 @@ fancy_echo "Installing TrueCrypt"
 fancy_echo "Installing Inboard, a screenshot manager"
   installcask inboard
 
+fancy_echo "Installing Anvil, a menubar app for managing local websites"
+  installcask anvil
+
+fancy_echo "Installing HockeyCoach, an application for Hockey"
+  installcask hockey-coach
 ### end mac-components/homebrew-cask
 
 fancy_echo "Downloading Projects"
