@@ -2,6 +2,7 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"
   brew tap phinze/homebrew-cask
+  brew tap caskroom/homebrew-versions
   brewin brew-cask
   brew update
 
@@ -38,7 +39,7 @@ fancy_echo "Installing CloudApp"
   installcask cloudapp
 
 fancy_echo "Installing AppDelete"
-  installcask app-delete
+  installcask appdelete
 
 fancy_echo "Installing Doxie drivers"
   installcask doxie
