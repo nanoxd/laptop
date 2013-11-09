@@ -11,6 +11,9 @@ fancy_echo "Downloading Projects"
 fancy_echo "Downloading Automation Scripts"
   git clone git@github.com:NanoXD/laptop.git ~/Developer/Projects/laptop
 
+fancy_echo "Downloading Railscast Downloader"
+  git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
+
 fancy_echo "Installing VMWare Fusion plugin for vagrant"
   vagrant plugin install vagrant-vmware-fusion
 
