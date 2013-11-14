@@ -15,6 +15,3 @@ fancy_echo "Linking teamocil folder"
 
 fancy_echo "Opening Powerline fonts"
   open ~/Developer/Code/nanofiles/powerline-fonts/UbuntuMono/*.ttf
-
-fancy_echo "Installing vundle, a package manager for VIM"
-  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
