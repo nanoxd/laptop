@@ -111,9 +111,6 @@ fancy_echo "Installing Airmail, for all the mailz"
 fancy_echo "Installing Bartender to wrangle the menubar"
   installcask bartender
 
-fancy_echo "Installing Postgres.app"
-  installcask postgres
-
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant
 
