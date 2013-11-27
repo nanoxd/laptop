@@ -23,9 +23,6 @@ fancy_echo "Installing Alfred"
 fancy_echo "Installing Google Chrome"
   installcask google-chrome
 
-fancy_echo "Installing Airmail, for all the mailz"
-  installcask airmail-beta
-
 fancy_echo "Installing Bartender to wrangle the menubar"
   installcask bartender
 
