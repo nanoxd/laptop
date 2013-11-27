@@ -47,7 +47,7 @@ fancy_echo "Disabling Gatekeeper"
 
 if [[ ! -f /usr/local/bin/brew ]]; then
   fancy_echo "Installing Homebrew, a good OS X package manager ..."
-    ruby <(curl -fsSL https://raw.github.com/mxcl/homebrew/go)
+    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 fi
 
 fancy_echo "Updating Homebrew ..."
