@@ -125,18 +125,17 @@ fancy_echo "Installing ruby-build, to install Rubies ..."
   git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 ### end linux-components/rbenv
 
-fancy_echo "Installing Ruby 2.0.0-p247 ..."
-  rbenv install 2.0.0-p247
+fancy_echo "Installing Ruby 2.0.0..."
+  rbenv install 2.0.0-p353
 
 fancy_echo "Installing Ruby 1.9.3"
-  rbenv install 1.9.3-p448
+  rbenv install 1.9.3-p484
 
-# Currently fails to compile on Mavericks
-#fancy_echo "Installing Rubinius 2.0.0"
-  #rbenv install rbx-2.1.1
+fancy_echo "Installing Rubinius 2.0.0"
+  rbenv install rbx-2.2.1
 
-fancy_echo "Setting Ruby 2.0.0-p247 as global default Ruby ..."
-  rbenv global 2.0.0-p247
+fancy_echo "Setting Ruby 2.0.0-p353 as global default Ruby ..."
+  rbenv global 2.0.0-p353
   rbenv rehash
 
 fancy_echo "Updating to latest Rubygems version ..."

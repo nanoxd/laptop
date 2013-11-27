@@ -218,18 +218,17 @@ fancy_echo "Installing Elixir, a functional programming language"
   brewin elixir
 ### end mac-components/languages
 
-fancy_echo "Installing Ruby 2.0.0-p247 ..."
-  rbenv install 2.0.0-p247
+fancy_echo "Installing Ruby 2.0.0..."
+  rbenv install 2.0.0-p353
 
 fancy_echo "Installing Ruby 1.9.3"
-  rbenv install 1.9.3-p448
+  rbenv install 1.9.3-p484
 
-# Currently fails to compile on Mavericks
-#fancy_echo "Installing Rubinius 2.0.0"
-  #rbenv install rbx-2.1.1
+fancy_echo "Installing Rubinius 2.0.0"
+  rbenv install rbx-2.2.1
 
-fancy_echo "Setting Ruby 2.0.0-p247 as global default Ruby ..."
-  rbenv global 2.0.0-p247
+fancy_echo "Setting Ruby 2.0.0-p353 as global default Ruby ..."
+  rbenv global 2.0.0-p353
   rbenv rehash
 
 fancy_echo "Updating to latest Rubygems version ..."
@@ -274,9 +273,6 @@ fancy_echo "Installing Alfred"
 
 fancy_echo "Installing Google Chrome"
   installcask google-chrome
-
-fancy_echo "Installing Airmail, for all the mailz"
-  installcask airmail-beta
 
 fancy_echo "Installing Bartender to wrangle the menubar"
   installcask bartender
@@ -337,7 +333,8 @@ fancy_echo "Downloading Projects"
   git clone git@github.com:NanoXD/boxylib.git ~/Developer/Projects/boxylib
   git clone git@github.com:NanoXD/eulerb.git ~/Developer/Projects/eulerb
   git clone git@github.com:NanoXD/fdpio.git ~/Developer/Projects/fdpio
-  git clone git@github.com:NanoXD/homebrew-cask.git ~/Developer/Projects/homebrew-cask
+  git clone git@github.com:NanoXD/homebrew-cask.git ~/Developer/Projects/Caskroom/homebrew-cask
+  git clone git@github.com:caskroom/homebrew-versions.git ~/Developer/Projects/Caskroom/homebrew-versions
   git clone git@github.com:NanoXD/mega_projects_rb.git ~/Developer/Projects/mega_projects_rb
   git clone git@github.com:NanoXD/octopress.git ~/Developer/Projects/blog
   git clone git@github.com:SeaRbSg/realm_of_racket.git ~/Developer/Projects/realm_of_racket
