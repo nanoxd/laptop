@@ -1,17 +1,17 @@
 fancy_echo "Disabling Gatekeeper"
   sudo spctl --master-disable
 
-if [[ ! -f /usr/local/bin/brew ]]; then
+if (( $+commands[brew] )); then
   fancy_echo "Installing Homebrew, a good OS X package manager ..."
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
-fi
+    ruby <(curl -fsS https://raw.github.com/mxcl/homebrew/go/install)
+    brew update
 
-fancy_echo "Updating Homebrew ..."
-  brew update
-
-if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
-  fancy_echo "Put Homebrew location earlier in PATH ..."
-    echo "\n# recommended by brew doctor" >> ~/.zshrc
-    echo "export PATH='/usr/local/bin:$PATH'\n" >> ~/.zshrc
-    source ~/.zshrc
+  if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
+    fancy_echo "Put Homebrew location earlier in PATH ..."
+      echo "\n# recommended by brew doctor" >> ~/.zshrc
+      echo "export PATH=\"/usr/local/bin:\$PATH\"\n" >> ~/.zshrc
+      source ~/.zshrc
+  fi
+else
+  fancy_echo "Homebrew already installed. Skipping ..."
 fi
