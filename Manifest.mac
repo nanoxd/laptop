@@ -16,6 +16,7 @@ mac-components/rbenv
 mac-components/rbenv-plugins
 mac-components/languages
 common-components/ruby-environment
+mac-components/bundler
 mac-components/heroku
 mac-components/npm-environment
 mac-components/homebrew-cask
