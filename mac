@@ -337,14 +337,18 @@ fancy_echo "Downloading Projects"
   git clone git@github.com:caskroom/homebrew-versions.git ~/Developer/Projects/Caskroom/homebrew-versions
   git clone git@github.com:NanoXD/mega_projects_rb.git ~/Developer/Projects/mega_projects_rb
   git clone git@github.com:NanoXD/octopress.git ~/Developer/Projects/blog
+  git clone git@github.com:NanoXD/readlog.git ~/Developer/Projects/readlog
   git clone git@github.com:SeaRbSg/realm_of_racket.git ~/Developer/Projects/realm_of_racket
   git clone git@github.com:NanoXD/Reddit-Daily-Programmer.git ~/Developer/Projects/Reddit-Daily-Programmer
 
 fancy_echo "Downloading Automation Scripts"
-  git clone git@github.com:NanoXD/laptop.git ~/Developer/Projects/laptop
+  git clone git@github.com:NanoXD/laptop.git ~/Developer/Automation/laptop
 
 fancy_echo "Downloading Railscast Downloader"
   git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
+
+fancy_echo "Downloading FPOO"
+  git clone git@github.com:NanoXD/fpoop.git ~/Developer/Projects/"Functional Programming for OO Programmer"
 
 fancy_echo "Installing VMWare Fusion plugin for vagrant"
   vagrant plugin install vagrant-vmware-fusion
