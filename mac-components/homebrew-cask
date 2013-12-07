@@ -76,3 +76,15 @@ fancy_echo "Installing Anvil, a menubar app for managing local websites"
 
 fancy_echo "Installing HockeyCoach, an application for Hockey"
   installcask hockeycoach
+
+fancy_echo "Installing WebP Quicklook Plugin"
+  installcask webp-quicklook
+
+fancy_echo "Installing other Quicklook Plugin"
+  installcask quicklook-csv
+  installcask qlcolorcode
+  installcask qlprettypatch
+  installcask quicklook-json
+  installcask qlmarkdown
+  installcask qlstephen
+  installcask qlcolorcode
