@@ -175,6 +175,7 @@ fancy_echo "Downloading Projects"
   git clone git@github.com:NanoXD/boxylib.git ~/Developer/Projects/boxylib
   git clone git@github.com:NanoXD/eulerb.git ~/Developer/Projects/eulerb
   git clone git@github.com:NanoXD/fdpio.git ~/Developer/Projects/fdpio
+  git clone git@github.com:NanoXD/fpoop.git ~/Developer/Projects/"Functional Programming for OO Programmer"
   git clone git@github.com:NanoXD/homebrew-cask.git ~/Developer/Projects/Caskroom/homebrew-cask
   git clone git@github.com:caskroom/homebrew-versions.git ~/Developer/Projects/Caskroom/homebrew-versions
   git clone git@github.com:NanoXD/mega_projects_rb.git ~/Developer/Projects/mega_projects_rb
@@ -188,9 +189,6 @@ fancy_echo "Downloading Automation Scripts"
 
 fancy_echo "Downloading Railscast Downloader"
   git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
-
-fancy_echo "Downloading FPOO"
-  git clone git@github.com:NanoXD/fpoop.git ~/Developer/Projects/"Functional Programming for OO Programmer"
 
 fancy_echo "Installing VMWare Fusion plugin for vagrant"
   vagrant plugin install vagrant-vmware-fusion
