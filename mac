@@ -252,7 +252,7 @@ fancy_echo "Installing the heroku-config plugin to pull config variables locally
 ### end mac-components/heroku
 
 fancy_echo "Installing essential NPM packages - Grunt, Yeoman, and Bower, because you need them ..."
-  npm install -g coffee-script grunt-cli npm-check-updates jasmine jsonlint jshint
+  npm install -g coffee-script grunt-cli npm-check-updates jsonlint jshint
 ### end mac-components/npm-environment
 
 export HOMEBREW_CASK_OPTS=--appdir=/Applications
