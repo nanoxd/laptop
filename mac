@@ -450,15 +450,6 @@ fancy_echo "Enable the Develop menu and the Web Inspector in Safari"
 fancy_echo "Add a context menu item for showing the Web Inspector in web views"
   defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-fancy_echo "Adding default login message"
-  defaults write com.apple.loginwindow.plist "LoginwindowText" -string "Property of Fernando Paredes - 831 521 2943 - nano@fdp.io"
-
-fancy_echo "Killing Affected applications"
-  for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" \
-    "Mail" "Safari"  "SystemUIServer" "iCal"; do
-    killall "$app" > /dev/null 2>&1
-  done
-
 fancy_echo "Done. Note that some of these changes require a logout/restart to take effect."
 
 ### end mac-components/default-settings
