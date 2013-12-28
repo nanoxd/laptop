@@ -6,7 +6,6 @@ fancy_echo "Tapping into homebrew-cask"
   brewin brew-cask
   brew update
 
-
 fancy_echo "Installing Dropbox"
   installcask dropbox
 
@@ -22,6 +21,9 @@ fancy_echo "Installing Alfred"
 
 fancy_echo "Installing Google Chrome"
   installcask google-chrome
+
+fancy_echo "Installing Java 7"
+  installcask java
 
 fancy_echo "Installing Bartender to wrangle the menubar"
   installcask bartender
