@@ -1,5 +1,9 @@
-fancy_echo "Installing git, hub, mercurial, Node.js..."
-  brewin git git-extras git-flow hub node
+fancy_echo "Installing git, mercurial, and extras"
+  brewin git git-extras git-flow node mercurial
+
+fancy_echo "Installing gh"
+  brew tap jingweno/gh
+  brew install gh
 
 fancy_echo "Installing tig, a pretty log viewer"
   brewin tig
