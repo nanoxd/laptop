@@ -53,5 +53,8 @@ fancy_echo "Installing youtube-dl for video downloads"
 fancy_echo "Installing ifstat, a tool for network interfaces"
   brewin ifstat
 
+fancy_echo "Installing irssi, a terminal irc client"
+  brewin irssi
+
 fancy_echo "Installing GNU grep"
   brewin https://raw.github.com/Homebrew/homebrew-dupes/master/grep.rb
