@@ -176,7 +176,7 @@ fancy_echo "Pulling dotfiles"
   git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
 
 fancy_echo "Linking dotfiles"
-  for dotfile in "${ZDOTDIR:-$HOME}"/Developer/Code/nanofiles/.{ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,vimrc}; do
+  for dotfile in "${ZDOTDIR:-$HOME}"/Developer/Code/nanofiles/.{ctags,gemrc,gitconfig,gitignore,pryrc,thymerc,tmux.conf,vimrc}; do
     ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/${dotfile:t}"
   done
 
