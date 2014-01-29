@@ -140,7 +140,7 @@ fancy_echo "Installing ImageMagick, to crop and resize images ..."
   brewin imagemagick
 
 fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
- brewin qt
+  brewin qt
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brewin watch
