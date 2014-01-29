@@ -230,6 +230,9 @@ fancy_echo "Installing Elixir, a functional programming language"
   brewin elixir
 ### end mac-components/languages
 
+fancy_echo "Installing Ruby 2.1.0..."
+  rbenv install 2.1.0
+
 fancy_echo "Installing Ruby 2.0.0..."
   rbenv install 2.0.0-p353
 
@@ -237,7 +240,7 @@ fancy_echo "Installing Ruby 1.9.3"
   rbenv install 1.9.3-p484
 
 fancy_echo "Setting Ruby 2.0.0-p353 as global default Ruby ..."
-  rbenv global 2.0.0-p353
+  rbenv global 2.1.0
   rbenv rehash
 
 fancy_echo "Updating to latest Rubygems version ..."
@@ -247,7 +250,7 @@ fancy_echo "Installing Bundler to install project-specific Ruby gems ..."
   gem install bundler --pre
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install gem-ctags teamocil rails jazz_hands
+  gem install gem-ctags teamocil rails jazz_hands thyme
 ### end common-components/ruby-environment
 
 fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
