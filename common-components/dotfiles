@@ -13,10 +13,5 @@ fancy_echo "Linking local bin folder"
 fancy_echo "Linking teamocil folder"
   ln -Fs ~/Developer/Code/nanofiles/teamocil ~/.teamocil
 
-fancy_echo "Creating irssi folder and downloading theme"
-  mkdir -p ~/.irssi/scripts/autorun
-  curl -o ~/.irssi/solarized-universal.theme https://raw.github.com/huyz/irssi-colors-solarized/master/solarized-universal.theme
-  curl -o ~/.irssi/scripts/autorun/usercount.pl http://scripts.irssi.org/scripts/usercount.pl
-
 fancy_echo "Opening Powerline fonts"
   open ~/Developer/Code/nanofiles/powerline-fonts/UbuntuMono/*.ttf
