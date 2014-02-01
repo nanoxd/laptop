@@ -4,6 +4,9 @@ fancy_echo "Installing RVM, to change Ruby versions ..."
 fancy_echo "Sourcing RVM"
   source ~/.rvm/scripts/rvm
 
+fancy_echo "Installing Ruby 2.1.0"
+  rvm install 2.1.0
+
 fancy_echo "Installing Ruby 2.0.0"
   rvm install 2.0.0
 
@@ -14,7 +17,7 @@ fancy_echo "Installing Rubinius 2.0.0"
   rvm install rbx-2.0.0
 
 fancy_echo "Setting Ruby 2.0.0 as default version"
-  rvm use 2.0.0 --default
+  rvm use 2.1.0 --default
 
 fancy_echo "Updating to latest Rubygems version"
   gem update --system
