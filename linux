@@ -145,7 +145,7 @@ fancy_echo "Installing Bundler to install project-specific Ruby gems ..."
   gem install bundler --pre
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install gem-ctags teamocil rails jazz_hands thyme
+  gem install gem-ctags teamocil rails jazz_hands thyme nomad-cli
 ### end common-components/ruby-environment
 
 fancy_echo "Configuring Bundler for faster, parallel gem installation ..."

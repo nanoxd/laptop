@@ -23,4 +23,4 @@ fancy_echo "Updating to latest Rubygems version"
   gem update --system
 
 fancy_echo "Installing critical Ruby gems"
-  rvm @global do gem install gem-ctags teamocil rails jazz_hands
+  rvm @global do gem install gem-ctags teamocil rails jazz_hands nomad-cli
