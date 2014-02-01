@@ -164,6 +164,9 @@ fancy_echo "Installing youtube-dl for video downloads"
 fancy_echo "Installing ifstat, a tool for network interfaces"
   brewin ifstat
 
+fancy_echo "Installing jq, a lightweight and flexible command-line JSON processor"
+  brewin jq
+
 fancy_echo "Installing GNU grep"
   brewin https://raw.github.com/Homebrew/homebrew-dupes/master/grep.rb
 ### end mac-components/packages
