@@ -97,5 +97,8 @@ fancy_echo "Installing other Quicklook Plugin"
 fancy_echo "Installing Delivery Status Widget"
   installcask delivery-status
 
+fancy_echo "Installing drivers"
+  installcask logitech-control-center
+
 fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
   installcask asepsis
