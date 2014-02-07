@@ -19,6 +19,9 @@ fancy_echo "Installing iTerm2, a better terminal experience"
 fancy_echo "Installing Alfred"
   installcask alfred
 
+fancy_echo "Installing Spacious"
+  installcask spacious
+
 fancy_echo "Installing Google Chrome"
   installcask google-chrome
 
