@@ -1,6 +1,2 @@
 fancy_echo "Installing go"
   brewin go
-
-fancy_echo "Installing Elixir, a functional programming language"
-  brewin erlang
-  brewin elixir
