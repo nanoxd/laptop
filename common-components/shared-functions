@@ -9,3 +9,7 @@ function installcask() {
 function brewin() {
   brew install "${@}" 2> /dev/null
 }
+
+function gemi() {
+  gem install "${@}"
+}

@@ -10,4 +10,5 @@ linux-components/silver-searcher-from-source
 linux-components/rbenv
 common-components/ruby-environment
 linux-components/bundler
+common-components/default-gems
 linux-components/heroku

@@ -12,11 +12,11 @@ mac-components/python
 mac-components/git
 mac-components/packages
 common-components/dotfiles
-mac-components/rbenv
-mac-components/rbenv-plugins
+mac-components/rvm
 mac-components/languages
 common-components/ruby-environment
 mac-components/bundler
+common-components/default-gems
 mac-components/heroku
 mac-components/npm-environment
 mac-components/homebrew-cask

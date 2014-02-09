@@ -34,6 +34,10 @@ function installcask() {
 function brewin() {
   brew install "${@}" 2> /dev/null
 }
+
+function gemi() {
+  gem install "${@}"
+}
 ### end common-components/shared-functions
 
 if [[ -f /etc/zshenv ]]; then
@@ -190,53 +194,31 @@ fancy_echo "Opening Powerline fonts"
   open ~/Developer/Code/nanofiles/powerline-fonts/UbuntuMono/*.ttf
 ### end common-components/dotfiles
 
-fancy_echo "Installing rbenv, to change Ruby versions ..."
-  brewin rbenv
+fancy_echo "Installing RVM, to change Ruby versions ..."
+  curl -L https://get.rvm.io | bash -s stable
 
-  if ! grep -qs "rbenv init" ~/.zshrc; then
-    echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+fancy_echo "Sourcing RVM"
+  source ~/.rvm/scripts/rvm
 
-    fancy_echo "Enable shims and autocompletion ..."
-      eval "$(rbenv init -)"
-  fi
-
-  source ~/.zshrc
-### end mac-components/rbenv
-
-fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
-  brewin rbenv-gem-rehash
-
-fancy_echo "Installing ruby-build, to install Rubies ..."
-  brewin ruby-build
-
-fancy_echo "Installing rbenv-ctags"
-  mkdir -p ~/.rbenv/plugins
-  git clone https://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
-
-fancy_echo "Installing rbenv-update, a plugin manager"
-  git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
-### end mac-components/rbenv-plugins
+fancy_echo "Installing critical Ruby gems"
+  rvm @global do gem install gem-ctags
+### end mac-components/rvm
 
 fancy_echo "Installing go"
   brewin go
-
-fancy_echo "Installing Elixir, a functional programming language"
-  brewin erlang
-  brewin elixir
 ### end mac-components/languages
 
 fancy_echo "Installing Ruby 2.1.0..."
-  rbenv install 2.1.0
+  rvm install 2.1.0
 
 fancy_echo "Installing Ruby 2.0.0..."
-  rbenv install 2.0.0-p353
+  rvm install 2.0.0
 
 fancy_echo "Installing Ruby 1.9.3"
-  rbenv install 1.9.3-p484
+  rvm install 1.9.3
 
 fancy_echo "Setting Ruby 2.0.0-p353 as global default Ruby ..."
-  rbenv global 2.1.0
-  rbenv rehash
+  rvm use 2.1.0 --default
 
 fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
@@ -245,7 +227,7 @@ fancy_echo "Installing Bundler to install project-specific Ruby gems ..."
   gem install bundler --pre
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install gem-ctags teamocil rails jazz_hands thyme nomad-cli
+  gem install gem-ctags
 ### end common-components/ruby-environment
 
 fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
@@ -253,6 +235,22 @@ fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
   bundle config --global jobs `expr $number_of_cores - 1`
 
 ### end mac-components/bundler
+
+fancy_echo "Installing Rails"
+  gemi rails
+
+fancy_echo "Installing teamocil, a tmux window manager"
+  gemi rails
+
+fancy_echo "Installing jazz_hands, a pry aio"
+  gemi jazz_hands
+
+fancy_echo "Installing Nomad, a iOS CLI tool"
+  gemi nomad-cli
+
+fancy_echo "Installing thyme, a pomodoro timer"
+  gemi thyme
+### end common-components/default-gems
 
 fancy_echo "Installing Heroku CLI client ..."
   brew install heroku-toolbelt
