@@ -52,9 +52,6 @@ fancy_echo "Installing Google Hangouts"
 fancy_echo "Installing Instacast, a podcast manager"
   installcask instacast
 
-fancy_echo "Installing Racket"
-  installcask racket
-
 fancy_echo "Installing Rdio"
   installcask rdio
 

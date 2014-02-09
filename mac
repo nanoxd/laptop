@@ -152,7 +152,7 @@ fancy_echo "Installing watch, to execute a program periodically and show the out
 fancy_echo "Installing tree, a recursive directory listing"
   brewin tree
 
-fancy_echo "Installing graphviz, npm, and pow! Trust me, you want them ..."
+fancy_echo "Installing graphviz and pow! Trust me, you want them ..."
   brewin graphviz
   curl get.pow.cx | sh
 
@@ -316,9 +316,6 @@ fancy_echo "Installing Google Hangouts"
 
 fancy_echo "Installing Instacast, a podcast manager"
   installcask instacast
-
-fancy_echo "Installing Racket"
-  installcask racket
 
 fancy_echo "Installing Rdio"
   installcask rdio
