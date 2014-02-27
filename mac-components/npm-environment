@@ -1,2 +1,11 @@
-fancy_echo "Installing essential NPM packages - Grunt, Yeoman, and Bower, because you need them ..."
-  npm install -g coffee-script grunt-cli npm-check-updates jsonlint jshint
+fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
+  npmig coffee-script
+  npmig grunt-cli
+  npmig npm-check-updates
+
+fancy_echo "Installing linters for JSON and JavaScript"
+  npmig jsonlint
+  npmig jshint
+
+fancy_echo "Installing tldr, a common usage man page"
+  npmig tldr

@@ -13,3 +13,7 @@ function brewin() {
 function gemi() {
   gem install "${@}"
 }
+
+function npmig() {
+  npm install -g "${@}"
+}

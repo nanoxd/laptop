@@ -28,6 +28,10 @@ function brewin() {
 function gemi() {
   gem install "${@}"
 }
+
+function npmig() {
+  npm install -g "${@}"
+}
 ### end common-components/shared-functions
 
 if ! grep -qiE 'precise|quantal|wheezy|raring|jessie|saucy' /etc/os-release
