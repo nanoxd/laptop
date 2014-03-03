@@ -210,6 +210,10 @@ fancy_echo "Installing critical Ruby gems"
 
 fancy_echo "Installing go"
   brewin go
+
+fancy_echo "Installing Alcatraz, the package manager for Xcode"
+  mkdir -p ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;
+  curl -L http://git.io/lOQWeA | tar xvz -C ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins
 ### end mac-components/languages
 
 fancy_echo "Installing Ruby 2.1.0..."
