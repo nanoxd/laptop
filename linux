@@ -134,7 +134,7 @@ fancy_echo "Installing ruby-build, to install Rubies ..."
 ### end linux-components/rbenv
 
 fancy_echo "Installing Ruby 2.1.0..."
-  rvm install 2.1.0
+  rvm install 2.1.1
 
 fancy_echo "Installing Ruby 2.0.0..."
   rvm install 2.0.0
@@ -143,7 +143,7 @@ fancy_echo "Installing Ruby 1.9.3"
   rvm install 1.9.3
 
 fancy_echo "Setting Ruby 2.0.0-p353 as global default Ruby ..."
-  rvm use 2.1.0 --default
+  rvm use 2.1.1 --default
 
 fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
