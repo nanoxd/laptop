@@ -1,0 +1,22 @@
+fancy_echo "Installing themes for Atom"
+  ap atom-mac-theme
+  ap fizzy
+  ap spacegray-dark-ui
+
+fancy_echo "Installing vim mode"
+  ap vim-mode
+
+fancy_echo "Installing TravisCI status"
+  ap travis-ci-status
+
+fancy_echo "Installing Test Status"
+  ap test-status
+
+fancy_echo "Installing autocomplete for Atom"
+  ap autocomplete-plus
+
+fancy_echo "Installing a color picker for Atom"
+  ap color-picker
+
+fancy_echo "Installing Rdio controls"
+  ap Rdio
