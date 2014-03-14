@@ -16,5 +16,5 @@ fancy_echo "Updating to latest Rubygems version ..."
 fancy_echo "Installing Bundler to install project-specific Ruby gems ..."
   gem install bundler --pre
 
-fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install gem-ctags
+fancy_echo "Installing critical Ruby gems for System environment"
+  gem install gem-ctags scout_realtime
