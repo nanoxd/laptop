@@ -42,6 +42,10 @@ function gemi() {
 function npmig() {
   npm install -g "${@}"
 }
+
+function ap() {
+  apm install "${@}"
+}
 ### end common-components/shared-functions
 
 if [[ -f /etc/zshenv ]]; then
@@ -411,6 +415,30 @@ fancy_echo "Installing Vagrant Digital Ocean provider"
 fancy_echo "Installing Vagrant pristine plugin"
   vagrant plugin install vagrant-pristine
 ### end common-components/projects
+
+fancy_echo "Installing themes for Atom"
+  ap atom-mac-theme
+  ap fizzy
+  ap spacegray-dark-ui
+
+fancy_echo "Installing vim mode"
+  ap vim-mode
+
+fancy_echo "Installing TravisCI status"
+  ap travis-ci-status
+
+fancy_echo "Installing Test Status"
+  ap test-status
+
+fancy_echo "Installing autocomplete for Atom"
+  ap autocomplete-plus
+
+fancy_echo "Installing a color picker for Atom"
+  ap color-picker
+
+fancy_echo "Installing Rdio controls"
+  ap Rdio
+### end common-components/atom
 
 fancy_echo "Select a name for your computer:"
   read comp_name

@@ -42,6 +42,10 @@ function gemi() {
 function npmig() {
   npm install -g "${@}"
 }
+
+function ap() {
+  apm install "${@}"
+}
 ### end common-components/shared-functions
 
 if ! grep -qiE 'precise|quantal|wheezy|raring|jessie|saucy' /etc/os-release
