@@ -385,6 +385,9 @@ fancy_echo "Installing drivers"
 
 fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
   installcask asepsis
+
+fancy_echo "Installing Trailer, a PR manager"
+  installcask trailer
 ### end mac-components/homebrew-cask
 
 fancy_echo "Downloading Projects"
