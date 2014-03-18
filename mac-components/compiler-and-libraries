@@ -1,2 +1,2 @@
 fancy_echo "Upgrading and linking OpenSSL ..."
-  brew install openssl
+  brewin openssl
