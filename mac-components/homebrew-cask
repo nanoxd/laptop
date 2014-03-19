@@ -40,7 +40,7 @@ fancy_echo "Installing CloudApp"
 fancy_echo "Installing AppDelete"
   installcask appdelete
 
-fancy_echo "Installing Doxie drivers"
+fancy_echo "Installing Doxie driver"
   installcask doxie
 
 fancy_echo "Installing Evernote for notes"
@@ -49,17 +49,11 @@ fancy_echo "Installing Evernote for notes"
 fancy_echo "Installing Google Hangouts"
   installcask google-hangouts
 
-fancy_echo "Installing Instacast, a podcast manager"
-  installcask instacast
-
 fancy_echo "Installing Rdio"
   installcask rdio
 
 fancy_echo "Installing Skype"
   installcask skype
-
-fancy_echo "Installing Sourcetree"
-  installcask sourcetree
 
 fancy_echo "Installing Sublime Text 3"
   installcask sublime-text-3
@@ -76,8 +70,8 @@ fancy_echo "Installing Inboard, a screenshot manager"
 fancy_echo "Installing Anvil, a menubar app for managing local websites"
   installcask anvil
 
-fancy_echo "Installing HockeyCoach, an application for Hockey"
-  installcask hockeycoach
+fancy_echo "Installing HockeyApp, an application for Hockey"
+  installcask hockey-app
 
 fancy_echo "Installing WebP Quicklook Plugin"
   installcask webp-quicklook
