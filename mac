@@ -321,7 +321,7 @@ fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant
 
 fancy_echo "Installing CloudApp"
-  installcask cloudapp
+  installcask cloud
 
 fancy_echo "Installing AppDelete"
   installcask appdelete
