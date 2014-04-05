@@ -436,6 +436,9 @@ fancy_echo "Installing a color picker for Atom"
 
 fancy_echo "Installing Rdio controls"
   ap Rdio
+
+fancy_echo "Installing a linter for Atom"
+  ap atom-linter
 ### end common-components/atom
 
 fancy_echo "Select a name for your computer:"
