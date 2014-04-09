@@ -6,6 +6,3 @@ fancy_echo "Installing jazz_hands, a pry aio"
 
 fancy_echo "Installing Nomad, a iOS CLI tool"
   gemi nomad-cli
-
-fancy_echo "Installing thyme, a pomodoro timer"
-  gemi thyme
