@@ -1,9 +1,6 @@
 fancy_echo "Installing Rails"
   gemi rails
 
-fancy_echo "Installing teamocil, a tmux window manager"
-  gemi rails
-
 fancy_echo "Installing jazz_hands, a pry aio"
   gemi jazz_hands
 
