@@ -8,7 +8,6 @@ fancy_echo "Downloading Projects"
   git clone git@github.com:NanoXD/mega_projects_rb.git ~/Developer/Projects/mega_projects_rb
   git clone git@github.com:NanoXD/octopress.git ~/Developer/Projects/blog
   git clone git@github.com:NanoXD/readlog.git ~/Developer/Projects/readlog
-  git clone git@github.com:SeaRbSg/realm_of_racket.git ~/Developer/Projects/realm_of_racket
   git clone git@github.com:NanoXD/Reddit-Daily-Programmer.git ~/Developer/Projects/Reddit-Daily-Programmer
 
 fancy_echo "Downloading Automation Scripts"
@@ -18,11 +17,3 @@ fancy_echo "Downloading Automation Scripts"
 fancy_echo "Downloading Railscast Downloader"
   git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
 
-fancy_echo "Installing VMWare Fusion plugin for vagrant"
-  vagrant plugin install vagrant-vmware-fusion
-
-fancy_echo "Installing Vagrant Digital Ocean provider"
-  vagrant plugin install vagrant-digitalocean
-
-fancy_echo "Installing Vagrant pristine plugin"
-  vagrant plugin install vagrant-pristine
