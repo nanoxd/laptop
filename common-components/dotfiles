@@ -10,8 +10,5 @@ fancy_echo "Linking dotfiles"
 fancy_echo "Linking local bin folder"
   ln -Fs ~/Developer/Code/nanofiles/bin ~/bin
 
-fancy_echo "Linking teamocil folder"
-  ln -Fs ~/Developer/Code/nanofiles/teamocil ~/.teamocil
-
 fancy_echo "Opening Powerline fonts"
   open ~/Developer/Code/nanofiles/powerline-fonts/UbuntuMono/*.ttf
