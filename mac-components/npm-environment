@@ -9,3 +9,6 @@ fancy_echo "Installing linters for JSON and JavaScript"
 
 fancy_echo "Installing tldr, a common usage man page"
   npmig tldr
+
+fancy_echo "Installing Yeoman"
+  npmig yo
