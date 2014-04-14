@@ -437,6 +437,10 @@ fancy_echo "Installing Vagrant pristine plugin"
   vagrant plugin install vagrant-pristine
 ### end mac-components/vagrant
 
+"Install Alcatraz, a plugin manager for Xcode"
+  curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+### end mac-components/xcode
+
 fancy_echo "Select a name for your computer:"
   read comp_name
   sudo scutil --set ComputerName "$comp_name"

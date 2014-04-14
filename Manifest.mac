@@ -24,4 +24,5 @@ common-components/projects
 common-components/vim
 common-components/atom
 mac-components/vagrant
+mac-components/xcode
 mac-components/default-settings
