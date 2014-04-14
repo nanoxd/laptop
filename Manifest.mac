@@ -21,6 +21,7 @@ mac-components/heroku
 mac-components/npm-environment
 mac-components/homebrew-cask
 common-components/projects
+common-components/vim
 common-components/atom
 mac-components/vagrant
 mac-components/default-settings

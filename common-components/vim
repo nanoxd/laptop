@@ -1,0 +1,3 @@
+fancy_echo "Grabbing a Solarized settings pack"
+  mkdir -p ~/.vim/settings
+  wget -O ~/.vim/settings/solarized.vim "https://raw.githubusercontent.com/skwp/dotfiles/master/vim/settings/solarized.vim"
