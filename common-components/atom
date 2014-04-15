@@ -14,12 +14,14 @@ fancy_echo "Installing Test Status"
 
 fancy_echo "Installing autocomplete for Atom"
   ap autocomplete-plus
+  ap autocomplete-paths
+  ap autocomplete-snippets
 
 fancy_echo "Installing a color picker for Atom"
   ap color-picker
 
-fancy_echo "Installing Rdio controls"
-  ap Rdio
+fancy_echo "Installing Spotify controls"
+  ap atom-spotify
 
 fancy_echo "Installing a linter for Atom"
   ap atom-linter
