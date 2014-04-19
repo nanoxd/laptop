@@ -1,5 +1,5 @@
 fancy_echo "Pulling dotfiles"
-  mkdir -p ~/Developer/{Automation,Code,OSS,Projects,Sandbox,Tools}
+  mkdir -p ~/Developer/{Automation,Code,Courses,OSS,Projects,Sandbox,Tools}
   git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
 
 fancy_echo "Linking dotfiles"
