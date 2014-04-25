@@ -331,8 +331,8 @@ fancy_echo "Installing Rdio"
 fancy_echo "Installing Skype"
   installcask skype
 
-fancy_echo "Installing Sublime Text 3"
-  installcask sublime-text-3
+fancy_echo "Installing Atom"
+  installcask atom
 
 fancy_echo "Installing The Unarchiver"
   installcask the-unarchiver
