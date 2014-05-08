@@ -71,7 +71,7 @@ fancy_echo "Installing Anvil, a menubar app for managing local websites"
   installcask anvil
 
 fancy_echo "Installing HockeyApp, an application for Hockey"
-  installcask hockey-app
+  installcask hockeyapp
 
 fancy_echo "Installing WebP Quicklook Plugin"
   installcask webp-quicklook
