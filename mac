@@ -311,6 +311,9 @@ fancy_echo "Installing Spacious"
 fancy_echo "Installing Google Chrome"
   installcask google-chrome
 
+fancy_echo "Installing Paw, a HTTP/REST API helper"
+  installcask paw
+
 fancy_echo "Installing Java 7"
   installcask java
 
