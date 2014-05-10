@@ -36,6 +36,7 @@ fancy_echo "Installing Bartender to wrangle the menubar"
 
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant
+  installcask vagrant-manager
 
 fancy_echo "Installing CloudApp"
   installcask cloud
