@@ -38,20 +38,19 @@ Install
 
 Read, then run the script:
 
-    zsh <(curl -s https://raw.github.com/NanoXD/laptop/master/mac)
+    zsh <(curl -s https://raw.githubusercontent.com/NanoXD/laptop/master/mac)
 
 ### Linux
 
 Read, then run the script:
 
-    zsh <(wget -qO- https://raw.github.com/NanoXD/laptop/master/linux)
+    zsh <(wget -qO- https://raw.githubusercontent.com/NanoXD/laptop/master/linux)
 
 What it sets up
 ---------------
 
 * Bundler gem for managing Ruby libraries
 * Exuberant Ctags for indexing files for vim tab completion
-* Foreman gem for serving Rails apps locally
 * Heroku Config plugin for local `ENV` variables
 * Heroku Toolbelt for interacting with the Heroku API
 * Hub gem for interacting with the GitHub API
@@ -61,7 +60,7 @@ What it sets up
 * Postgres gem for talking to Postgres from Ruby
 * Qt for headless JavaScript testing via Capybara Webkit
 * Rails gem for writing web applications
-* Rbenv for managing versions of the Ruby programming language
+* RVM for managing versions of the Ruby programming language
 * Redis for storing key-value data
 * Ruby Build for installing Rubies
 * Ruby stable for writing general-purpose code
