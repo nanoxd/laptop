@@ -104,6 +104,7 @@ fancy_echo "Opening browser to add SSH key to Github"
 
 fancy_echo "Upgrading and linking OpenSSL ..."
   brewin openssl
+  brew link openssl --force
 ### end mac-components/compiler-and-libraries
 
 fancy_echo "Installing Python 3"

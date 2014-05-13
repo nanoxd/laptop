@@ -1,2 +1,3 @@
 fancy_echo "Upgrading and linking OpenSSL ..."
   brewin openssl
+  brew link openssl --force
