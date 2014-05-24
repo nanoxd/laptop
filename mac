@@ -76,18 +76,19 @@ fi
 fancy_echo "Installilng Zsh 5.0.2 ..."
   brewin zsh
 
-fancy_echo "Installing libmpdclient for Tmux"
-  brewin libmpdclient
-
 fancy_echo "Adding /usr/local/bin/zsh to /etc/shells (Will require administrative password)"
   echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
-
-fancy_echo "Changing default login shell to /usr/local/bin/zsh (Will require administrative password)"
-  chsh -s /usr/local/bin/zsh
 
 fancy_echo "Installing Prezto, some terrific extensions to zsh ... "
   curl -L https://github.com/NanoXD/prezto/raw/master/install.zsh | zsh
 ### end mac-components/prezto
+
+fancy_echo "Installing Fish"
+  brewin fish --HEAD
+
+fancy_echo "Adding fish to /etc/shells"
+  echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+### end mac-components/fish
 
 fancy_echo "Checking for SSH key, generating one if it doesn't exist ..."
   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa -C "nano@fdp.io"
