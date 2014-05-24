@@ -19,9 +19,6 @@ fancy_echo "Installing vim from Homebrew to get the latest version ..."
 fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
   brewin ctags
 
-fancy_echo "Installing GNU emacs"
-  brewin emacs
-
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
   brewin tmux
 
@@ -40,9 +37,8 @@ fancy_echo "Installing watch, to execute a program periodically and show the out
 fancy_echo "Installing tree, a recursive directory listing"
   brewin tree
 
-fancy_echo "Installing graphviz and pow! Trust me, you want them ..."
+fancy_echo "Installing graphviz"
   brewin graphviz
-  curl get.pow.cx | sh
 
 fancy_echo "Installing Mosh, a mobile shell"
   brewin mosh
