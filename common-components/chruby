@@ -1,0 +1,7 @@
+fancy_echo "Installing Chruby, a ruby version manager"
+  brewin https://raw.githubusercontent.com/JeanMertz/chruby-fish/master/homebrew/chruby-fish.rb
+  brewin ruby-install
+
+fancy_echo "Setting Ruby 2.1.2 as default ruby"
+  ruby-install ruby
+  echo "ruby-2.1.2" > ~/.ruby-version
