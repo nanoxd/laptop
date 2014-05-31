@@ -4,7 +4,7 @@ fancy_echo "Install wget with I18n URI support"
 fancy_echo "Installing Redis, a good key-value database ..."
   brewin redis
 
-fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
+fancy_echo "Installing The Silver Searcher to search the contents of files ..."
   brewin the_silver_searcher
 
 fancy_echo "Installing ack, just in case"
@@ -16,13 +16,14 @@ fancy_echo "Installing CMake"
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
   brewin macvim --override-system-vim
 
-fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
+fancy_echo "Installing ctags"
   brewin ctags
 
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
   brewin tmux
+  brewin ngrok
 
-fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
+fancy_echo "Installing reattach-to-user-namespace, for copy-paste and compatibility with tmux ..."
   brewin reattach-to-user-namespace
 
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
@@ -42,9 +43,6 @@ fancy_echo "Installing graphviz"
 
 fancy_echo "Installing Mosh, a mobile shell"
   brewin mosh
-
-fancy_echo "Installing htop, a TUI for top"
-  brewin htop
 
 fancy_echo "Installing youtube-dl for video downloads"
   brewin youtube-dl
