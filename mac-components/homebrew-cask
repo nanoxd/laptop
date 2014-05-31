@@ -1,48 +1,14 @@
-export HOMEBREW_CASK_OPTS=--appdir=/Applications
-
-fancy_echo "Tapping into homebrew-cask"
-  brew tap caskroom/homebrew-cask
-  brew tap caskroom/homebrew-versions
-  brewin brew-cask
-  brew update
-
-fancy_echo "Installing Dropbox"
-  installcask dropbox
-
-fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
-  installcask pckeyboardhack
-  installcask keyremap4macbook
-
-fancy_echo "Installing iTerm2, a better terminal experience"
-  installcask iterm2
-
-fancy_echo "Installing Alfred"
-  installcask alfred
-
 fancy_echo "Installing Spacious"
   installcask spacious
-
-fancy_echo "Installing Google Chrome"
-  installcask google-chrome
 
 fancy_echo "Installing Paw, a HTTP/REST API helper"
   installcask paw
 
-fancy_echo "Installing Java 7"
+fancy_echo "Installing Java"
   installcask java
-
-fancy_echo "Installing Bartender to wrangle the menubar"
-  installcask bartender
-
-fancy_echo "Installing Vagrant to manage dev environments"
-  installcask vagrant
-  installcask vagrant-manager
 
 fancy_echo "Installing CloudApp"
   installcask cloud
-
-fancy_echo "Installing AppDelete"
-  installcask appdelete
 
 fancy_echo "Installing Doxie driver"
   installcask doxie
@@ -53,26 +19,14 @@ fancy_echo "Installing Evernote for notes"
 fancy_echo "Installing Google Hangouts"
   installcask google-hangouts
 
-fancy_echo "Installing Rdio"
-  installcask rdio
-
-fancy_echo "Installing Skype"
-  installcask skype
+fancy_echo "Installing Spotify"
+  installcask spotify
 
 fancy_echo "Installing Atom"
   installcask atom
 
-fancy_echo "Installing The Unarchiver"
-  installcask the-unarchiver
-
-fancy_echo "Installing TrueCrypt"
-  installcask truecrypt
-
 fancy_echo "Installing Inboard, a screenshot manager"
   installcask inboard
-
-fancy_echo "Installing Anvil, a menubar app for managing local websites"
-  installcask anvil
 
 fancy_echo "Installing HockeyApp, an application for Hockey"
   installcask hockeyapp
@@ -88,9 +42,6 @@ fancy_echo "Installing other Quicklook Plugin"
   installcask qlmarkdown
   installcask qlstephen
   installcask qlcolorcode
-
-fancy_echo "Installing Delivery Status Widget"
-  installcask delivery-status
 
 fancy_echo "Installing drivers"
   installcask logitech-control-center

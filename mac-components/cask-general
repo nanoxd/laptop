@@ -1,0 +1,46 @@
+export HOMEBREW_CASK_OPTS=--appdir=/Applications
+
+fancy_echo "Tapping into homebrew-cask"
+  brew tap caskroom/homebrew-cask
+  brew tap caskroom/homebrew-versions
+  brewin caskroom/brew-cask
+  brew update
+
+fancy_echo "Installing Dropbox"
+  installcask dropbox
+
+fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
+  installcask pckeyboardhack
+  installcask keyremap4macbook
+
+fancy_echo "Installing iTerm2, a better terminal experience"
+  installcask iterm2
+
+fancy_echo "Installing Alfred"
+  installcask alfred
+
+fancy_echo "Installing Google Chrome"
+  installcask google-chrome
+
+fancy_echo "Installing Bartender to wrangle the menubar"
+  installcask bartender
+
+fancy_echo "Installing Vagrant to manage dev environments"
+  installcask vagrant
+  installcask vagrant-manager
+
+fancy_echo "Installing AppDelete"
+  installcask appdelete
+
+fancy_echo "Installing The Unarchiver"
+  installcask the-unarchiver
+
+fancy_echo "Installing Anvil, a menubar app for managing local websites"
+  installcask anvil
+
+fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
+  installcask asepsis
+
+fancy_echo "Installing TrueCrypt"
+  installcask truecrypt
+
