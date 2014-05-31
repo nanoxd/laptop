@@ -1,5 +1,5 @@
 fancy_echo "Installing git, mercurial, and extras"
-  brewin git git-extras git-flow node mercurial
+  brewin git git-extras node mercurial
 
 fancy_echo "Installing tig, a pretty log viewer"
   brewin tig
