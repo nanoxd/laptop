@@ -1,18 +1,10 @@
 fancy_echo "Pulling dotfiles"
-  mkdir -p ~/Developer/{Automation,Code,Courses,OSS,Projects,Sandbox,Tools}
-  git clone --recursive git@github.com:NanoXD/nanofiles.git ~/Developer/Code/nanofiles
+  git clone --recursive git@github.com:NanoXD/nanofiles.git ~/.nanofiles
 
 fancy_echo "Linking dotfiles"
-  for dotfile in "${ZDOTDIR:-$HOME}"/Developer/Code/nanofiles/{ackrc,agignore,bin,config,ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,vimrc}; do
+  for dotfile in "${ZDOTDIR:-$HOME}"/.nanofiles/{ackrc,agignore,bin,config,ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,vimrc}; do
     ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/${dotfile:t}"
   done
 
-fancy_echo "Creating folders for Go and Cheatsheets"
-  mkdir -p ~/Developer/Code/{go,cheatsheets}
-
-fancy_echo "Pulling cheatsheets/code guides"
-  git clone git@github.com:Avocarrot/ios-cheatsheet.git ~/Developer/Code/cheatsheets/ios
-  git clone git@github.com:bbatsov/rails-style-guide.git ~/Developer/Code/cheatsheets/rails
-
 fancy_echo "Opening Powerline fonts"
-  open ~/Developer/Code/nanofiles/powerline-fonts/UbuntuMono/*.ttf
+  open ~/.nanofiles/powerline-fonts/UbuntuMono/*.ttf
