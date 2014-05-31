@@ -20,8 +20,5 @@ fancy_echo "Installing autocomplete for Atom"
 fancy_echo "Installing a color picker for Atom"
   ap color-picker
 
-fancy_echo "Installing Spotify controls"
-  ap atom-spotify
-
 fancy_echo "Installing a linter for Atom"
   ap atom-linter
