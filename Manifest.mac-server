@@ -5,7 +5,6 @@ common-components/check-home-bin
 common-components/shared-functions
 mac-components/zsh-fix
 mac-components/homebrew
-mac-components/prezto
 mac-components/fish
 mac-components/ssh-key
 mac-components/compiler-and-libraries
@@ -18,11 +17,7 @@ mac-components/languages
 common-components/ruby-environment
 mac-components/bundler
 common-components/default-gems
-mac-components/heroku
-mac-components/npm-environment
 mac-components/cask-general
-mac-components/homebrew-cask
-common-components/projects
 common-components/vim
 common-components/atom
 mac-components/xcode

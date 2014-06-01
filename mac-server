@@ -73,16 +73,6 @@ else
 fi
 ### end mac-components/homebrew
 
-fancy_echo "Installilng Zsh 5.0.2 ..."
-  brewin zsh
-
-fancy_echo "Adding /usr/local/bin/zsh to /etc/shells (Will require administrative password)"
-  echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
-
-fancy_echo "Installing Prezto, some terrific extensions to zsh ... "
-  curl -L https://github.com/NanoXD/prezto/raw/master/install.zsh | zsh
-### end mac-components/prezto
-
 fancy_echo "Installing Fish"
   brewin fish --HEAD
 
@@ -224,29 +214,6 @@ fancy_echo "Installing Nomad, a iOS CLI tool"
   gemi nomad-cli
 ### end common-components/default-gems
 
-fancy_echo "Installing Heroku CLI client ..."
-  brew install heroku-toolbelt
-
-fancy_echo "Installing the heroku-config plugin to pull config variables locally to be used as ENV variables ..."
-  heroku plugins:install git://github.com/ddollar/heroku-config.git
-### end mac-components/heroku
-
-fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
-  npmig coffee-script
-  npmig grunt-cli
-  npmig npm-check-updates
-
-fancy_echo "Installing linters for JSON and JavaScript"
-  npmig jsonlint
-  npmig jshint
-
-fancy_echo "Installing tldr, a common usage man page"
-  npmig tldr
-
-fancy_echo "Installing Yeoman"
-  npmig yo
-### end mac-components/npm-environment
-
 export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"
@@ -294,90 +261,6 @@ fancy_echo "Installing TrueCrypt"
   installcask truecrypt
 
 ### end mac-components/cask-general
-
-fancy_echo "Installing Spacious"
-  installcask spacious
-
-fancy_echo "Installing Paw, a HTTP/REST API helper"
-  installcask paw
-
-fancy_echo "Installing Java"
-  installcask java
-
-fancy_echo "Installing CloudApp"
-  installcask cloud
-
-fancy_echo "Installing Doxie driver"
-  installcask doxie
-
-fancy_echo "Installing Evernote for notes"
-  installcask evernote
-
-fancy_echo "Installing Google Hangouts"
-  installcask google-hangouts
-
-fancy_echo "Installing Spotify"
-  installcask spotify
-
-fancy_echo "Installing Atom"
-  installcask atom
-
-fancy_echo "Installing Inboard, a screenshot manager"
-  installcask inboard
-
-fancy_echo "Installing HockeyApp, an application for Hockey"
-  installcask hockeyapp
-
-fancy_echo "Installing WebP Quicklook Plugin"
-  installcask webp-quicklook
-
-fancy_echo "Installing other Quicklook Plugin"
-  installcask quicklook-csv
-  installcask qlcolorcode
-  installcask qlprettypatch
-  installcask quicklook-json
-  installcask qlmarkdown
-  installcask qlstephen
-  installcask qlcolorcode
-
-fancy_echo "Installing drivers"
-  installcask logitech-control-center
-
-fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
-  installcask asepsis
-
-fancy_echo "Installing Trailer, a PR manager"
-  installcask trailer
-### end mac-components/homebrew-cask
-
-fancy_echo "Downloading Projects"
-  mkdir -p ~/Developer/{Automation,Code,Courses,OSS,Projects,Sandbox,Tools}
-  git clone git@github.com:NanoXD/boxylib.git ~/Developer/Projects/boxylib
-  git clone git@github.com:NanoXD/eulerb.git ~/Developer/Projects/eulerb
-  git clone git@github.com:NanoXD/fdpio.git ~/Developer/Projects/fdpio
-  git clone git@github.com:NanoXD/fpoop.git ~/Developer/Projects/"Functional Programming for OO Programmer"
-  git clone git@github.com:NanoXD/homebrew-cask.git ~/Developer/Projects/Caskroom/homebrew-cask
-  git clone git@github.com:caskroom/homebrew-versions.git ~/Developer/Projects/Caskroom/homebrew-versions
-  git clone git@github.com:NanoXD/mega_projects_rb.git ~/Developer/Projects/mega_projects_rb
-  git clone git@github.com:NanoXD/octopress.git ~/Developer/Projects/blog
-  git clone git@github.com:NanoXD/readlog.git ~/Developer/Projects/readlog
-  git clone git@github.com:NanoXD/Reddit-Daily-Programmer.git ~/Developer/Projects/Reddit-Daily-Programmer
-
-fancy_echo "Downloading Automation Scripts"
-  git clone git@github.com:NanoXD/laptop.git ~/Developer/Automation/laptop
-  git clone git@github.com:Alives/tmux-statusline.git ~/Developer/Tools/tmux-statusline
-
-fancy_echo "Downloading Railscast Downloader"
-  git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
-
-fancy_echo "Creating folders for Go and Cheatsheets"
-  mkdir -p ~/Developer/Code/{go,cheatsheets}
-
-fancy_echo "Pulling cheatsheets/code guides"
-  git clone git@github.com:Avocarrot/ios-cheatsheet.git ~/Developer/Code/cheatsheets/ios
-  git clone git@github.com:bbatsov/rails-style-guide.git ~/Developer/Code/cheatsheets/rails
-
-### end common-components/projects
 
 fancy_echo "Grabbing a Solarized settings pack"
   mkdir -p ~/.vim/settings
