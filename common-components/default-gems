@@ -1,3 +1,6 @@
+fancy_echo "Installing gem ctags"
+  gemi gem-ctags github-auth
+
 fancy_echo "Installing Rails"
   gemi rails
 
