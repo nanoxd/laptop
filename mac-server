@@ -257,9 +257,8 @@ fancy_echo "Installing Anvil, a menubar app for managing local websites"
 fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
   installcask asepsis
 
-fancy_echo "Installing TrueCrypt"
-  installcask truecrypt
-
+fancy_echo "Installing LaunchRocket, a homebrew-services manager"
+  installcask launchrocket
 ### end mac-components/cask-general
 
 fancy_echo "Grabbing a Solarized settings pack"
