@@ -277,6 +277,7 @@ fancy_echo "Installing Bartender to wrangle the menubar"
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant
   installcask vagrant-manager
+  installcask boot2docker
 
 fancy_echo "Installing AppDelete"
   installcask appdelete
