@@ -214,6 +214,22 @@ fancy_echo "Installing Nomad, a iOS CLI tool"
   gemi nomad-cli
 ### end common-components/default-gems
 
+fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
+  npmig coffee-script
+  npmig grunt-cli
+  npmig npm-check-updates
+
+fancy_echo "Installing linters for JSON and JavaScript"
+  npmig jsonlint
+  npmig jshint
+
+fancy_echo "Installing Yeoman"
+  npmig yo
+
+fancy_echo "Installing vtop"
+  npmig vtop
+### end mac-components/npm-environment
+
 export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"

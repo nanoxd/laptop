@@ -17,6 +17,7 @@ mac-components/languages
 common-components/ruby-environment
 mac-components/bundler
 common-components/default-gems
+mac-components/npm-environment
 mac-components/cask-general
 common-components/vim
 common-components/atom
