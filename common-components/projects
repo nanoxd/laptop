@@ -17,6 +17,7 @@ fancy_echo "Downloading Automation Scripts"
 
 fancy_echo "Downloading Railscast Downloader"
   git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
+  git clone git@github.com:Ball/nsscreencast-fetcher.git ~/Developer/Tools/nsscreencast-downloader
 
 fancy_echo "Creating folders for Go and Cheatsheets"
   mkdir -p ~/Developer/Code/{go,cheatsheets}
