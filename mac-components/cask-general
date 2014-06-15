@@ -44,3 +44,6 @@ fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
 
 fancy_echo "Installing LaunchRocket, a homebrew-services manager"
   installcask launchrocket
+
+fancy_echo "Installing Charles, an HTTP traffic sniffer"
+  installcask charles
