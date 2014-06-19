@@ -160,7 +160,7 @@ fancy_echo "Installing Nomad, a iOS CLI tool"
   gemi nomad-cli
 
 fancy_echo "Installing Tools for Xcode Dev"
-  gemi cocoapods jazzy
+  gemi cocoapods jazzy synx
 
 ### end common-components/default-gems
 
