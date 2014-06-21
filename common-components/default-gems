@@ -11,5 +11,5 @@ fancy_echo "Installing Nomad, a iOS CLI tool"
   gemi nomad-cli
 
 fancy_echo "Installing Tools for Xcode Dev"
-  gemi cocoapods jazzy synx
+  gemi cocoapods jazzy synx helios
 
