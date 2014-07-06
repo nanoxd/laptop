@@ -409,8 +409,11 @@ fancy_echo "Grabbing a Solarized settings pack"
   wget -O ~/.vim/settings/solarized.vim "https://raw.githubusercontent.com/skwp/dotfiles/master/vim/settings/solarized.vim"
 ### end common-components/vim
 
-fancy_echo "Install Go ctags parser"
+fancy_echo "Installing Go ctags parser"
   go get -u github.com/jstemmer/gotags
+
+fancy_echo "Installing Heroku CLI"
+  L=/usr/local/bin/hk && curl -sL -A "`uname -sp`" https://hk.heroku.com/hk.gz | zcat >$L && chmod +x $L
 ### end common-components/go
 
 fancy_echo "Installing themes for Atom"

@@ -1,2 +1,5 @@
-fancy_echo "Install Go ctags parser"
+fancy_echo "Installing Go ctags parser"
   go get -u github.com/jstemmer/gotags
+
+fancy_echo "Installing Heroku CLI"
+  L=/usr/local/bin/hk && curl -sL -A "`uname -sp`" https://hk.heroku.com/hk.gz | zcat >$L && chmod +x $L
