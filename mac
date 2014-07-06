@@ -272,8 +272,8 @@ fancy_echo "Installing Dropbox"
   installcask dropbox
 
 fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
-  installcask pckeyboardhack
-  installcask keyremap4macbook
+  installcask seil
+  installcask karabiner
 
 fancy_echo "Installing iTerm2, a better terminal experience"
   installcask iterm2
@@ -408,6 +408,10 @@ fancy_echo "Grabbing a Solarized settings pack"
   mkdir -p ~/.vim/settings
   wget -O ~/.vim/settings/solarized.vim "https://raw.githubusercontent.com/skwp/dotfiles/master/vim/settings/solarized.vim"
 ### end common-components/vim
+
+fancy_echo "Install Go ctags parser"
+  go get -u github.com/jstemmer/gotags
+### end common-components/go
 
 fancy_echo "Installing themes for Atom"
   ap atom-mac-theme

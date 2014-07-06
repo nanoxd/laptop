@@ -255,8 +255,8 @@ fancy_echo "Installing Dropbox"
   installcask dropbox
 
 fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
-  installcask pckeyboardhack
-  installcask keyremap4macbook
+  installcask seil
+  installcask karabiner
 
 fancy_echo "Installing iTerm2, a better terminal experience"
   installcask iterm2

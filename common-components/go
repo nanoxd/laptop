@@ -1,0 +1,2 @@
+fancy_echo "Install Go ctags parser"
+  go get -u github.com/jstemmer/gotags
