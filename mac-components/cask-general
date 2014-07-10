@@ -3,6 +3,7 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
   brew tap caskroom/homebrew-versions
+  brew tap caskroom/homebrew-fonts
   brew_install caskroom/brew-cask
   brew update
 
@@ -47,3 +48,6 @@ fancy_echo "Installing LaunchRocket, a homebrew-services manager"
 
 fancy_echo "Installing Charles, an HTTP traffic sniffer"
   installcask charles
+
+fancy_echo "Installing fonts"
+  installcask font-ubuntu-mono-powerline

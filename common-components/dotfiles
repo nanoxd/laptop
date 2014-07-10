@@ -5,6 +5,3 @@ fancy_echo "Linking dotfiles"
   for dotfile in "${ZDOTDIR:-$HOME}"/.nanofiles/{ackrc,agignore,bin,config,ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,tmux-layouts,tmuxifier,vimrc}; do
     ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/${dotfile:t}"
   done
-
-fancy_echo "Opening Powerline fonts"
-  open ~/.nanofiles/powerline-fonts/UbuntuMono/*.ttf

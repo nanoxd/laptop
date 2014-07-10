@@ -180,9 +180,6 @@ fancy_echo "Linking dotfiles"
   for dotfile in "${ZDOTDIR:-$HOME}"/.nanofiles/{ackrc,agignore,bin,config,ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,tmux-layouts,tmuxifier,vimrc}; do
     ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/${dotfile:t}"
   done
-
-fancy_echo "Opening Powerline fonts"
-  open ~/.nanofiles/powerline-fonts/UbuntuMono/*.ttf
 ### end common-components/dotfiles
 
 ### end mac-components/chruby
@@ -251,6 +248,7 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
   brew tap caskroom/homebrew-versions
+  brew tap caskroom/homebrew-fonts
   brew_install caskroom/brew-cask
   brew update
 
@@ -295,6 +293,9 @@ fancy_echo "Installing LaunchRocket, a homebrew-services manager"
 
 fancy_echo "Installing Charles, an HTTP traffic sniffer"
   installcask charles
+
+fancy_echo "Installing fonts"
+  installcask font-ubuntu-mono-powerline
 ### end mac-components/cask-general
 
 fancy_echo "Installing Spacious"
