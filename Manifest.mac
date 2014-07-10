@@ -6,7 +6,6 @@ common-components/shared-functions
 mac-components/mac-functions
 mac-components/zsh-fix
 mac-components/homebrew
-mac-components/prezto
 mac-components/fish
 mac-components/ssh-key
 mac-components/compiler-and-libraries

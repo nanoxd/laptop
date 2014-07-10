@@ -82,16 +82,6 @@ else
 fi
 ### end mac-components/homebrew
 
-fancy_echo "Installilng Zsh 5.0.2 ..."
-  brewin zsh
-
-fancy_echo "Adding /usr/local/bin/zsh to /etc/shells (Will require administrative password)"
-  echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
-
-fancy_echo "Installing Prezto, some terrific extensions to zsh ... "
-  curl -L https://github.com/NanoXD/prezto/raw/master/install.zsh | zsh
-### end mac-components/prezto
-
 fancy_echo "Installing Fish"
   brewin fish --HEAD
 
