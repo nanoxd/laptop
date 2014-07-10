@@ -54,3 +54,6 @@ fancy_echo "Installing Trailer, a PR manager"
 
 fancy_echo "Installing QuickRadar"
   installcask quickradar
+
+fancy_echo "Installing Sketch"
+  installcask sketch
