@@ -220,13 +220,6 @@ fancy_echo "Installing Tools for Xcode Dev"
 
 ### end common-components/default-gems
 
-fancy_echo "Installing Heroku CLI client ..."
-  brew install heroku-toolbelt
-
-fancy_echo "Installing the heroku-config plugin to pull config variables locally to be used as ENV variables ..."
-  heroku plugins:install git://github.com/ddollar/heroku-config.git
-### end mac-components/heroku
-
 fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
   npmig coffee-script
   npmig grunt-cli
