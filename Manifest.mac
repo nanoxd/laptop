@@ -13,7 +13,7 @@ mac-components/python
 mac-components/git
 mac-components/packages
 common-components/dotfiles
-mac-components/chruby
+common-components/chruby
 mac-components/languages
 common-components/ruby-environment
 mac-components/bundler

@@ -1,3 +1,3 @@
 fancy_echo "Installing Chruby, a ruby version manager"
-  brewin https://raw.githubusercontent.com/JeanMertz/chruby-fish/master/homebrew/chruby-fish.rb
-  brewin ruby-install
+  brew_install_or_upgrade 'https://raw.githubusercontent.com/JeanMertz/chruby-fish/master/homebrew/chruby-fish.rb'
+  brew_install_or_upgrade 'ruby-install'

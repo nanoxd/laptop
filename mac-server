@@ -179,7 +179,10 @@ fancy_echo "Linking dotfiles"
   done
 ### end common-components/dotfiles
 
-### end mac-components/chruby
+fancy_echo "Installing Chruby, a ruby version manager"
+  brew_install_or_upgrade 'https://raw.githubusercontent.com/JeanMertz/chruby-fish/master/homebrew/chruby-fish.rb'
+  brew_install_or_upgrade 'ruby-install'
+### end common-components/chruby
 
 fancy_echo "Installing go"
   brew_install_or_upgrade 'go'
