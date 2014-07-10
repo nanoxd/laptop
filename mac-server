@@ -44,11 +44,11 @@ function ap() {
 }
 ### end common-components/shared-functions
 
-brew_install() {
-  if ! brew list -1 | grep -q '^'"$1"'\$'; then
-    (brew upgrade $@) || echo ''
+brew_install_or_upgrade() {
+  if brew list -1 | grep -Fqx "$1"; then
+    (brew upgrade "$@") || true
   else
-    brew install $@
+    brew install "$@"
   fi
 }
 ### end mac-components/mac-functions
@@ -79,7 +79,7 @@ fi
 ### end mac-components/homebrew
 
 fancy_echo "Installing Fish"
-  brew_install 'fish' '--HEAD'
+  brew_install_or_upgrade 'fish' '--HEAD'
 
 fancy_echo "Adding fish to /etc/shells"
   echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
@@ -99,75 +99,75 @@ fancy_echo "Opening browser to add SSH key to Github"
 ### end mac-components/ssh-key
 
 fancy_echo "Upgrading and linking OpenSSL ..."
-  brew_install 'openssl'
+  brew_install_or_upgrade 'openssl'
   brew link openssl --force
 ### end mac-components/compiler-and-libraries
 
 fancy_echo "Installing Python 3"
-  brew_install 'python3'
+  brew_install_or_upgrade 'python3'
 ### end mac-components/python
 
 fancy_echo "Installing git, mercurial, and extras"
-  brew_install 'git' 'git-extras' 'node' 'mercurial'
+  brew_install_or_upgrade 'git' 'git-extras' 'node' 'mercurial'
 
 fancy_echo "Installing tig, a pretty log viewer"
-  brew_install 'tig'
+  brew_install_or_upgrade 'tig'
 ### end mac-components/git
 
 fancy_echo "Install wget with I18n URI support"
-  brew_install 'wget' '--enable-iri'
+  brew_install_or_upgrade 'wget' '--enable-iri'
 
 fancy_echo "Installing Redis, a good key-value database ..."
-  brew_install 'redis'
+  brew_install_or_upgrade 'redis'
 
 fancy_echo "Installing The Silver Searcher to search the contents of files ..."
-  brew_install 'the_silver_searcher'
+  brew_install_or_upgrade 'the_silver_searcher'
 
 fancy_echo "Installing ack, just in case"
-  brew_install 'ack'
+  brew_install_or_upgrade 'ack'
 
 fancy_echo "Installing CMake"
-  brew_install 'cmake'
+  brew_install_or_upgrade 'cmake'
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brew_install 'macvim' '--override-system-vim'
+  brew_install_or_upgrade 'macvim' '--override-system-vim'
 
 fancy_echo "Installing ctags"
-  brew_install 'ctags'
+  brew_install_or_upgrade 'ctags'
 
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
-  brew_install 'tmux'
-  brew_install 'ngrok'
+  brew_install_or_upgrade 'tmux'
+  brew_install_or_upgrade 'ngrok'
 
 fancy_echo "Installing reattach-to-user-namespace, for copy-paste and compatibility with tmux ..."
-  brew_install 'reattach-to-user-namespace' '--HEAD'
+  brew_install_or_upgrade 'reattach-to-user-namespace' '--HEAD'
 
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brew_install 'imagemagick'
+  brew_install_or_upgrade 'imagemagick'
 
 fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew_install 'qt'
+  brew_install_or_upgrade 'qt'
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew_install 'watch'
+  brew_install_or_upgrade 'watch'
 
 fancy_echo "Installing tree, a recursive directory listing"
-  brew_install 'tree'
+  brew_install_or_upgrade 'tree'
 
 fancy_echo "Installing graphviz"
-  brew_install 'graphviz'
+  brew_install_or_upgrade 'graphviz'
 
 fancy_echo "Installing Mosh, a mobile shell"
-  brew_install 'mosh'
+  brew_install_or_upgrade 'mosh'
 
 fancy_echo "Installing youtube-dl for video downloads"
-  brew_install 'youtube-dl'
+  brew_install_or_upgrade 'youtube-dl'
 
 fancy_echo "Installing ifstat, a tool for network interfaces"
-  brew_install 'ifstat'
+  brew_install_or_upgrade 'ifstat'
 
 fancy_echo "Installing jq, a lightweight and flexible command-line JSON processor"
-  brew_install 'jq'
+  brew_install_or_upgrade 'jq'
 ### end mac-components/packages
 
 fancy_echo "Pulling dotfiles"
@@ -182,7 +182,7 @@ fancy_echo "Linking dotfiles"
 ### end mac-components/chruby
 
 fancy_echo "Installing go"
-  brew_install 'go'
+  brew_install_or_upgrade 'go'
 ### end mac-components/languages
 
 fancy_echo "Setting Ruby 2.1.2 as default ruby"
@@ -235,7 +235,7 @@ fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
   brew tap caskroom/homebrew-versions
   brew tap caskroom/homebrew-fonts
-  brew_install 'caskroom/brew-cask'
+  brew_install_or_upgrade 'caskroom/brew-cask'
   brew update
 
 fancy_echo "Installing Dropbox"

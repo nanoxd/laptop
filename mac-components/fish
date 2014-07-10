@@ -1,5 +1,5 @@
 fancy_echo "Installing Fish"
-  brew_install 'fish' '--HEAD'
+  brew_install_or_upgrade 'fish' '--HEAD'
 
 fancy_echo "Adding fish to /etc/shells"
   echo "/usr/local/bin/fish" | sudo tee -a /etc/shells

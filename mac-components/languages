@@ -1,2 +1,2 @@
 fancy_echo "Installing go"
-  brew_install 'go'
+  brew_install_or_upgrade 'go'
