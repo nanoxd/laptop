@@ -1,57 +1,54 @@
 fancy_echo "Install wget with I18n URI support"
-  brew_install wget --enable-iri
+  brew_install 'wget' '--enable-iri'
 
 fancy_echo "Installing Redis, a good key-value database ..."
-  brew_install redis
+  brew_install 'redis'
 
 fancy_echo "Installing The Silver Searcher to search the contents of files ..."
-  brew_install the_silver_searcher
+  brew_install 'the_silver_searcher'
 
 fancy_echo "Installing ack, just in case"
-  brew_install ack
+  brew_install 'ack'
 
 fancy_echo "Installing CMake"
-  brew_install cmake
+  brew_install 'cmake'
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brew_install macvim --override-system-vim
+  brew_install 'macvim' '--override-system-vim'
 
 fancy_echo "Installing ctags"
-  brew_install ctags
+  brew_install 'ctags'
 
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
-  brew_install tmux
-  brew_install ngrok
+  brew_install 'tmux'
+  brew_install 'ngrok'
 
 fancy_echo "Installing reattach-to-user-namespace, for copy-paste and compatibility with tmux ..."
-  brew_install reattach-to-user-namespace
+  brew_install 'reattach-to-user-namespace' '--HEAD'
 
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brew_install imagemagick
+  brew_install 'imagemagick'
 
 fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew_install qt
+  brew_install 'qt'
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew_install watch
+  brew_install 'watch'
 
 fancy_echo "Installing tree, a recursive directory listing"
-  brew_install tree
+  brew_install 'tree'
 
 fancy_echo "Installing graphviz"
-  brew_install graphviz
+  brew_install 'graphviz'
 
 fancy_echo "Installing Mosh, a mobile shell"
-  brew_install mosh
+  brew_install 'mosh'
 
 fancy_echo "Installing youtube-dl for video downloads"
-  brew_install youtube-dl
+  brew_install 'youtube-dl'
 
 fancy_echo "Installing ifstat, a tool for network interfaces"
-  brew_install ifstat
+  brew_install 'ifstat'
 
 fancy_echo "Installing jq, a lightweight and flexible command-line JSON processor"
-  brew_install jq
-
-fancy_echo "Installing GNU grep"
-  brew_install https://raw.github.com/Homebrew/homebrew-dupes/master/grep.rb
+  brew_install 'jq'

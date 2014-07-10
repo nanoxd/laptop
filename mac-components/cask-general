@@ -4,7 +4,7 @@ fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
   brew tap caskroom/homebrew-versions
   brew tap caskroom/homebrew-fonts
-  brew_install caskroom/brew-cask
+  brew_install 'caskroom/brew-cask'
   brew update
 
 fancy_echo "Installing Dropbox"
