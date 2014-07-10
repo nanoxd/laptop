@@ -3,7 +3,7 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
   brew tap caskroom/homebrew-versions
-  brewin caskroom/brew-cask
+  brew_install caskroom/brew-cask
   brew update
 
 fancy_echo "Installing Dropbox"

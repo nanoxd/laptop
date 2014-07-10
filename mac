@@ -31,10 +31,6 @@ function installcask() {
   brew cask install "${@}" 2> /dev/null
 }
 
-function brewin() {
-  brew install "${@}" 2> /dev/null
-}
-
 function gemi() {
   gem install "${@}"
 }
@@ -83,7 +79,7 @@ fi
 ### end mac-components/homebrew
 
 fancy_echo "Installing Fish"
-  brewin fish --HEAD
+  brew_install fish --HEAD
 
 fancy_echo "Adding fish to /etc/shells"
   echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
@@ -103,78 +99,78 @@ fancy_echo "Opening browser to add SSH key to Github"
 ### end mac-components/ssh-key
 
 fancy_echo "Upgrading and linking OpenSSL ..."
-  brewin openssl
+  brew_install openssl
   brew link openssl --force
 ### end mac-components/compiler-and-libraries
 
 fancy_echo "Installing Python 3"
-  brewin python3
+  brew_install python3
 ### end mac-components/python
 
 fancy_echo "Installing git, mercurial, and extras"
-  brewin git git-extras node mercurial
+  brew_install git git-extras node mercurial
 
 fancy_echo "Installing tig, a pretty log viewer"
-  brewin tig
+  brew_install tig
 ### end mac-components/git
 
 fancy_echo "Install wget with I18n URI support"
-  brewin wget --enable-iri
+  brew_install wget --enable-iri
 
 fancy_echo "Installing Redis, a good key-value database ..."
-  brewin redis
+  brew_install redis
 
 fancy_echo "Installing The Silver Searcher to search the contents of files ..."
-  brewin the_silver_searcher
+  brew_install the_silver_searcher
 
 fancy_echo "Installing ack, just in case"
-  brewin ack
+  brew_install ack
 
 fancy_echo "Installing CMake"
-  brewin cmake
+  brew_install cmake
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brewin macvim --override-system-vim
+  brew_install macvim --override-system-vim
 
 fancy_echo "Installing ctags"
-  brewin ctags
+  brew_install ctags
 
 fancy_echo "Installing tmux, to save project state and switch between projects ..."
-  brewin tmux
-  brewin ngrok
+  brew_install tmux
+  brew_install ngrok
 
 fancy_echo "Installing reattach-to-user-namespace, for copy-paste and compatibility with tmux ..."
-  brewin reattach-to-user-namespace
+  brew_install reattach-to-user-namespace
 
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brewin imagemagick
+  brew_install imagemagick
 
 fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brewin qt
+  brew_install qt
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brewin watch
+  brew_install watch
 
 fancy_echo "Installing tree, a recursive directory listing"
-  brewin tree
+  brew_install tree
 
 fancy_echo "Installing graphviz"
-  brewin graphviz
+  brew_install graphviz
 
 fancy_echo "Installing Mosh, a mobile shell"
-  brewin mosh
+  brew_install mosh
 
 fancy_echo "Installing youtube-dl for video downloads"
-  brewin youtube-dl
+  brew_install youtube-dl
 
 fancy_echo "Installing ifstat, a tool for network interfaces"
-  brewin ifstat
+  brew_install ifstat
 
 fancy_echo "Installing jq, a lightweight and flexible command-line JSON processor"
-  brewin jq
+  brew_install jq
 
 fancy_echo "Installing GNU grep"
-  brewin https://raw.github.com/Homebrew/homebrew-dupes/master/grep.rb
+  brew_install https://raw.github.com/Homebrew/homebrew-dupes/master/grep.rb
 ### end mac-components/packages
 
 fancy_echo "Pulling dotfiles"
@@ -192,7 +188,7 @@ fancy_echo "Opening Powerline fonts"
 ### end mac-components/chruby
 
 fancy_echo "Installing go"
-  brewin go
+  brew_install go
 
 fancy_echo "Installing Alcatraz, the package manager for Xcode"
   mkdir -p ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;
@@ -255,7 +251,7 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
   brew tap caskroom/homebrew-versions
-  brewin caskroom/brew-cask
+  brew_install caskroom/brew-cask
   brew update
 
 fancy_echo "Installing Dropbox"

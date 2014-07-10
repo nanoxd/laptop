@@ -1,2 +1,2 @@
 fancy_echo "Installing Python 3"
-  brewin python3
+  brew_install python3

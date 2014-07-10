@@ -1,5 +1,5 @@
 fancy_echo "Installing go"
-  brewin go
+  brew_install go
 
 fancy_echo "Installing Alcatraz, the package manager for Xcode"
   mkdir -p ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;
