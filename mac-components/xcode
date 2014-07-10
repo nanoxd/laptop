@@ -1,2 +1,3 @@
-"Install Alcatraz, a plugin manager for Xcode"
-  curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+fancy_echo "Installing Alcatraz, the package manager for Xcode"
+  mkdir -p ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;
+  curl -L http://git.io/lOQWeA | tar xvz -C ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins
