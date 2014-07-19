@@ -343,6 +343,9 @@ fancy_echo "Installing QuickRadar"
 
 fancy_echo "Installing Sketch"
   installcask sketch
+
+fancy_echo "Installing Plug, a media player for The Hype Machine"
+  installcask plug
 ### end mac-components/homebrew-cask
 
 fancy_echo "Downloading Projects"
