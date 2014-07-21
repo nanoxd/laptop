@@ -30,4 +30,5 @@ fancy_echo "Creating folders for Go and Cheatsheets"
 fancy_echo "Pulling cheatsheets/code guides"
   git clone git@github.com:Avocarrot/ios-cheatsheet.git ~/Developer/Code/cheatsheets/ios
   git clone git@github.com:bbatsov/rails-style-guide.git ~/Developer/Code/cheatsheets/rails
+  git clone git@github.com:raywenderlich/swift-style-guide.git ~/Developer/Code/cheatsheets/swift
 
