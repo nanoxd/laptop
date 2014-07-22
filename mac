@@ -168,6 +168,9 @@ fancy_echo "Installing ifstat, a tool for network interfaces"
 
 fancy_echo "Installing jq, a lightweight and flexible command-line JSON processor"
   brew_install_or_upgrade 'jq'
+
+fancy_echo "Installing httpie, a user friendly curl"
+  brew_install_or_upgrade 'httpie'
 ### end mac-components/packages
 
 fancy_echo "Pulling dotfiles"
