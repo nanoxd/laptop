@@ -57,3 +57,6 @@ fancy_echo "Installing Sketch"
 
 fancy_echo "Installing Plug, a media player for The Hype Machine"
   installcask plug
+
+fancy_echo "Installing Sketch Toolbox, a plugin manager"
+  installcask sketch-toolbox
