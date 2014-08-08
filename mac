@@ -229,8 +229,9 @@ fancy_echo "Installing gem ctags"
 fancy_echo "Installing Rails"
   gemi rails
 
-fancy_echo "Installing jazz_hands, a pry aio"
-  gemi jazz_hands
+# Not working on 10.10
+#fancy_echo "Installing jazz_hands, a pry aio"
+#  gemi jazz_hands
 
 fancy_echo "Installing Nomad, a iOS CLI tool"
   gemi nomad-cli
@@ -309,6 +310,10 @@ fancy_echo "Installing Charles, an HTTP traffic sniffer"
 
 fancy_echo "Installing fonts"
   installcask font-ubuntu-mono-powerline
+  installcask font-input
+
+fancy_echo "Installing LaunchControl"
+  installcask launccontrol
 ### end mac-components/cask-general
 
 fancy_echo "Installing Spacious"

@@ -51,3 +51,7 @@ fancy_echo "Installing Charles, an HTTP traffic sniffer"
 
 fancy_echo "Installing fonts"
   installcask font-ubuntu-mono-powerline
+  installcask font-input
+
+fancy_echo "Installing LaunchControl"
+  installcask launccontrol
