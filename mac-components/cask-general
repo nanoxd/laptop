@@ -17,9 +17,6 @@ fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
 fancy_echo "Installing iTerm2, a better terminal experience"
   installcask iterm2
 
-fancy_echo "Installing Alfred"
-  installcask alfred
-
 fancy_echo "Installing Google Chrome"
   installcask google-chrome
 
@@ -40,9 +37,6 @@ fancy_echo "Installing The Unarchiver"
 fancy_echo "Installing Anvil, a menubar app for managing local websites"
   installcask anvil
 
-fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
-  installcask asepsis
-
 fancy_echo "Installing LaunchRocket, a homebrew-services manager"
   installcask launchrocket
 
@@ -54,4 +48,10 @@ fancy_echo "Installing fonts"
   installcask font-input
 
 fancy_echo "Installing LaunchControl"
-  installcask launccontrol
+  installcask launchcontrol
+
+fancy_echo "Installing Spilio, a Pinboard GUI"
+  installcask spilio
+
+fancy_echo "Installing iStat Menus"
+  installcask istat-menus

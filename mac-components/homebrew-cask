@@ -7,9 +7,6 @@ fancy_echo "Installing Paw, a HTTP/REST API helper"
 fancy_echo "Installing Java"
   installcask java
 
-fancy_echo "Installing CloudApp"
-  installcask cloud
-
 fancy_echo "Installing Doxie driver"
   installcask doxie
 
@@ -40,9 +37,6 @@ fancy_echo "Installing other Quicklook Plugin"
   installcask qlstephen
   installcask qlcolorcode
 
-fancy_echo "Installing drivers"
-  installcask logitech-control-center
-
 fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
   installcask asepsis
 
@@ -60,3 +54,11 @@ fancy_echo "Installing Plug, a media player for The Hype Machine"
 
 fancy_echo "Installing Sketch Toolbox, a plugin manager"
   installcask sketch-toolbox
+
+fancy_echo "Installing Tower, a git GUI"
+  installcask tower
+
+fancy_echo "Installing Xscope"
+  installcask xscope
+
+
