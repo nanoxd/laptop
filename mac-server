@@ -155,6 +155,9 @@ fancy_echo "Install wget with I18n URI support"
 fancy_echo "Installing Redis, a good key-value database ..."
   brew_install_or_upgrade 'redis'
 
+fancy_echo "Installing Postgresql"
+  brew_install_or_upgrade 'postgresql'
+
 fancy_echo "Installing The Silver Searcher to search the contents of files ..."
   brew_install_or_upgrade 'the_silver_searcher'
 
