@@ -216,7 +216,7 @@ fancy_echo "Pulling dotfiles"
 
 fancy_echo "Linking dotfiles"
   for dotfile in "${ZDOTDIR:-$HOME}"/.nanofiles/{ackrc,agignore,bin,config,ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,tmux-layouts,tmuxifier,vimrc}; do
-    ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/${dotfile:t}"
+    ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/.${dotfile:t}"
   done
 ### end common-components/dotfiles
 
