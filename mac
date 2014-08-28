@@ -147,6 +147,9 @@ fancy_echo "Installing git, mercurial, and extras"
 
 fancy_echo "Installing tig, a pretty log viewer"
   brew_install_or_upgrade 'tig'
+
+fancy_echo "Installing git-getpull"
+  curl -o /usr/local/bin/git-getpull https://raw.github.com/a-warner/git-getpull/master/git-getpull && chmod +x /usr/local/bin/git-getpull
 ### end mac-components/git
 
 fancy_echo "Install wget with I18n URI support"
