@@ -1,5 +1,5 @@
 fancy_echo "Installing git, mercurial, and extras"
-  brew_install_or_upgrade 'git' 'git-extras' 'node' 'mercurial'
+  brew_install_or_upgrade 'git' 'git-extras' 'mercurial'
 
 fancy_echo "Installing tig, a pretty log viewer"
   brew_install_or_upgrade 'tig'

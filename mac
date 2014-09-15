@@ -143,7 +143,7 @@ fancy_echo "Installing Python 3"
 ### end mac-components/python
 
 fancy_echo "Installing git, mercurial, and extras"
-  brew_install_or_upgrade 'git' 'git-extras' 'node' 'mercurial'
+  brew_install_or_upgrade 'git' 'git-extras' 'mercurial'
 
 fancy_echo "Installing tig, a pretty log viewer"
   brew_install_or_upgrade 'tig'
@@ -260,6 +260,11 @@ fancy_echo "Installing Tools for Xcode Dev"
   gemi cocoapods jazzy synx helios
 
 ### end common-components/default-gems
+
+fancy_echo "Installing npm"
+  curl https://raw.githubusercontent.com/Alex7Kom/nvm-fish/master/install.fish | fish
+  nvm install 0.10
+  nvm alias default 0.10
 
 fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
   npmig coffee-script

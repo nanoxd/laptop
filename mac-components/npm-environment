@@ -1,3 +1,8 @@
+fancy_echo "Installing npm"
+  curl https://raw.githubusercontent.com/Alex7Kom/nvm-fish/master/install.fish | fish
+  nvm install 0.10
+  nvm alias default 0.10
+
 fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
   npmig coffee-script
   npmig grunt-cli
