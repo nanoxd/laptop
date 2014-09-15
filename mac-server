@@ -230,6 +230,14 @@ fancy_echo "Installing Chruby, a ruby version manager"
 
 fancy_echo "Installing go"
   brew_install_or_upgrade 'go'
+
+fancy_echo "Installing Scala"
+  brew_install_or_upgrade 'scala'
+  brew_install_or_upgrade 'sbt'
+  brew_install_or_upgrade 'giter8'
+
+fancy_echo "Installing Conscript"
+  curl https://raw.githubusercontent.com/n8han/conscript/master/setup.sh | sh
 ### end mac-components/languages
 
 fancy_echo "Setting Ruby 2.1.2 as default ruby"

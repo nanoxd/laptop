@@ -1,2 +1,10 @@
 fancy_echo "Installing go"
   brew_install_or_upgrade 'go'
+
+fancy_echo "Installing Scala"
+  brew_install_or_upgrade 'scala'
+  brew_install_or_upgrade 'sbt'
+  brew_install_or_upgrade 'giter8'
+
+fancy_echo "Installing Conscript"
+  curl https://raw.githubusercontent.com/n8han/conscript/master/setup.sh | sh
