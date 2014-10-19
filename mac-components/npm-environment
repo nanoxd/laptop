@@ -6,14 +6,9 @@ fancy_echo "Installing npm"
 fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
   npmig coffee-script
   npmig grunt-cli
-  npmig npm-check-updates
 
 fancy_echo "Installing linters for JSON and JavaScript"
-  npmig jsonlint
   npmig jshint
 
 fancy_echo "Installing Yeoman"
   npmig yo
-
-fancy_echo "Installing vtop"
-  npmig vtop

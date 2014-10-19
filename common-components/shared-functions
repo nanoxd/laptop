@@ -13,7 +13,3 @@ function gemi() {
 function npmig() {
   npm install -g "${@}"
 }
-
-function ap() {
-  apm install "${@}"
-}

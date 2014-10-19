@@ -22,17 +22,11 @@ fancy_echo "Trackpad: enable tap to click for this user and for the login screen
   defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
   defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-fancy_echo "Increase sound quality for Bluetooth headphones/headsets"
-  defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
 fancy_echo "Enable full keyboard access for all controls"
   defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 fancy_echo "Set a blazingly fast keyboard repeat rate"
   defaults write NSGlobalDomain KeyRepeat -int 0
-
-fancy_echo "Enable subpixel font rendering on non-Apple LCDs"
-  defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 fancy_echo "Show icons for hard drives, servers, and removable media on the desktop"
   defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true

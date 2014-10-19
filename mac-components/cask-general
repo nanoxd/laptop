@@ -2,7 +2,6 @@ export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
-  brew tap caskroom/homebrew-versions
   brew tap caskroom/homebrew-fonts
   brew_install_or_upgrade 'caskroom/brew-cask'
   brew update
@@ -10,22 +9,18 @@ fancy_echo "Tapping into homebrew-cask"
 fancy_echo "Installing Dropbox"
   installcask dropbox
 
-fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
+fancy_echo "Installing Seil & Karabiner to remap keys"
   installcask seil
   installcask karabiner
 
 fancy_echo "Installing iTerm2, a better terminal experience"
   installcask iterm2
 
-fancy_echo "Installing Google Chrome"
-  installcask google-chrome
-
 fancy_echo "Installing Bartender to wrangle the menubar"
   installcask bartender
 
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant
-  installcask vagrant-manager
   installcask boot2docker
 
 fancy_echo "Installing AppDelete"
@@ -37,18 +32,14 @@ fancy_echo "Installing The Unarchiver"
 fancy_echo "Installing Anvil, a menubar app for managing local websites"
   installcask anvil
 
-fancy_echo "Installing LaunchRocket, a homebrew-services manager"
-  installcask launchrocket
-
 fancy_echo "Installing Charles, an HTTP traffic sniffer"
   installcask charles
 
 fancy_echo "Installing fonts"
   installcask font-ubuntu-mono-powerline
   installcask font-input
-
-fancy_echo "Installing LaunchControl"
-  installcask launchcontrol
+  installcask font-ruboto
+  installcask font-montserrat
 
 fancy_echo "Installing Spilio, a Pinboard GUI"
   installcask spilio

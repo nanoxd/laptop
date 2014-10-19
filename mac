@@ -38,10 +38,6 @@ function gemi() {
 function npmig() {
   npm install -g "${@}"
 }
-
-function ap() {
-  apm install "${@}"
-}
 ### end common-components/shared-functions
 
 brew_install_or_upgrade() {
@@ -189,9 +185,6 @@ fancy_echo "Installing ImageMagick, to crop and resize images ..."
 fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
   brew_install_or_upgrade 'qt'
 
-fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew_install_or_upgrade 'watch'
-
 fancy_echo "Installing tree, a recursive directory listing"
   brew_install_or_upgrade 'tree'
 
@@ -204,9 +197,6 @@ fancy_echo "Installing Mosh, a mobile shell"
 fancy_echo "Installing youtube-dl for video downloads"
   brew_install_or_upgrade 'youtube-dl'
 
-fancy_echo "Installing ifstat, a tool for network interfaces"
-  brew_install_or_upgrade 'ifstat'
-
 fancy_echo "Installing jq, a lightweight and flexible command-line JSON processor"
   brew_install_or_upgrade 'jq'
 
@@ -217,32 +207,21 @@ fancy_echo "Installing httpie, a user friendly curl"
 fancy_echo "Pulling dotfiles"
   git clone --recursive git@github.com:NanoXD/nanofiles.git ~/.nanofiles
 
-fancy_echo "Linking dotfiles"
-  for dotfile in "${ZDOTDIR:-$HOME}"/.nanofiles/{ackrc,agignore,bin,config,ctags,gemrc,gitconfig,gitignore,pryrc,tmux.conf,tmux-layouts,tmuxifier,vimrc}; do
-    ln -fs "$dotfile" "${ZDOTDIR:-$HOME}/.${dotfile:t}"
-  done
 ### end common-components/dotfiles
 
-fancy_echo "Installing Chruby, a ruby version manager"
-  brew_install_or_upgrade 'https://raw.githubusercontent.com/JeanMertz/chruby-fish/master/homebrew/chruby-fish.rb'
+fancy_echo "Installing Fry, a ruby version manager"
+  brew_install_or_upgrade 'https://gist.githubusercontent.com/nanoxd/eb59666b8621ad6188c0/raw/d4affcf8a9241e0db29d1a33a3247b337f771ec0/fry.rb'
   brew_install_or_upgrade 'ruby-install'
 ### end common-components/chruby
 
 fancy_echo "Installing go"
   brew_install_or_upgrade 'go'
 
-fancy_echo "Installing Scala"
-  brew_install_or_upgrade 'scala'
-  brew_install_or_upgrade 'sbt'
-  brew_install_or_upgrade 'giter8'
-
-fancy_echo "Installing Conscript"
-  curl https://raw.githubusercontent.com/n8han/conscript/master/setup.sh | sh
 ### end mac-components/languages
 
 fancy_echo "Setting Ruby 2.1.2 as default ruby"
   ruby-install ruby
-  echo "ruby-2.1.2" > ~/.ruby-version
+  echo "ruby-2.1.3" > ~/.ruby-version
 ### end common-components/ruby-environment
 
 fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
@@ -277,24 +256,18 @@ fancy_echo "Installing npm"
 fancy_echo "Installing CoffeeScript, Grunt, and npm-check-updates"
   npmig coffee-script
   npmig grunt-cli
-  npmig npm-check-updates
 
 fancy_echo "Installing linters for JSON and JavaScript"
-  npmig jsonlint
   npmig jshint
 
 fancy_echo "Installing Yeoman"
   npmig yo
-
-fancy_echo "Installing vtop"
-  npmig vtop
 ### end mac-components/npm-environment
 
 export HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 fancy_echo "Tapping into homebrew-cask"
   brew tap caskroom/homebrew-cask
-  brew tap caskroom/homebrew-versions
   brew tap caskroom/homebrew-fonts
   brew_install_or_upgrade 'caskroom/brew-cask'
   brew update
@@ -302,22 +275,18 @@ fancy_echo "Tapping into homebrew-cask"
 fancy_echo "Installing Dropbox"
   installcask dropbox
 
-fancy_echo "Installing PCKeyboardHack & KeyRemap4Macbook to remap keys"
+fancy_echo "Installing Seil & Karabiner to remap keys"
   installcask seil
   installcask karabiner
 
 fancy_echo "Installing iTerm2, a better terminal experience"
   installcask iterm2
 
-fancy_echo "Installing Google Chrome"
-  installcask google-chrome
-
 fancy_echo "Installing Bartender to wrangle the menubar"
   installcask bartender
 
 fancy_echo "Installing Vagrant to manage dev environments"
   installcask vagrant
-  installcask vagrant-manager
   installcask boot2docker
 
 fancy_echo "Installing AppDelete"
@@ -329,18 +298,14 @@ fancy_echo "Installing The Unarchiver"
 fancy_echo "Installing Anvil, a menubar app for managing local websites"
   installcask anvil
 
-fancy_echo "Installing LaunchRocket, a homebrew-services manager"
-  installcask launchrocket
-
 fancy_echo "Installing Charles, an HTTP traffic sniffer"
   installcask charles
 
 fancy_echo "Installing fonts"
   installcask font-ubuntu-mono-powerline
   installcask font-input
-
-fancy_echo "Installing LaunchControl"
-  installcask launchcontrol
+  installcask font-ruboto
+  installcask font-montserrat
 
 fancy_echo "Installing Spilio, a Pinboard GUI"
   installcask spilio
@@ -348,9 +313,6 @@ fancy_echo "Installing Spilio, a Pinboard GUI"
 fancy_echo "Installing iStat Menus"
   installcask istat-menus
 ### end mac-components/cask-general
-
-fancy_echo "Installing Spacious"
-  installcask spacious
 
 fancy_echo "Installing Paw, a HTTP/REST API helper"
   installcask paw
@@ -361,38 +323,11 @@ fancy_echo "Installing Java"
 fancy_echo "Installing Doxie driver"
   installcask doxie
 
-fancy_echo "Installing Evernote for notes"
-  installcask evernote
-
-fancy_echo "Installing Google Hangouts"
-  installcask google-hangouts
-
 fancy_echo "Installing Spotify"
   installcask spotify
 
-fancy_echo "Installing Atom"
-  installcask atom
-
 fancy_echo "Installing HockeyApp, an application for Hockey"
   installcask hockeyapp
-
-fancy_echo "Installing WebP Quicklook Plugin"
-  installcask webp-quicklook
-
-fancy_echo "Installing other Quicklook Plugin"
-  installcask quicklook-csv
-  installcask qlcolorcode
-  installcask qlprettypatch
-  installcask quicklook-json
-  installcask qlmarkdown
-  installcask qlstephen
-  installcask qlcolorcode
-
-fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
-  installcask asepsis
-
-fancy_echo "Installing Trailer, a PR manager"
-  installcask trailer
 
 fancy_echo "Installing QuickRadar"
   installcask quickradar
@@ -412,34 +347,27 @@ fancy_echo "Installing Tower, a git GUI"
 fancy_echo "Installing Xscope"
   installcask xscope
 
-
+fancy_echo "Installing ImageOptim"
+  installcask imageoptim
 ### end mac-components/homebrew-cask
 
 fancy_echo "Downloading Projects"
   mkdir -p ~/Developer/{Automation,Code,Courses,OSS,Projects,Sandbox,Tools}
-  git clone git@github.com:NanoXD/boxylib.git ~/Developer/Projects/boxylib
-  git clone git@github.com:NanoXD/eulerb.git ~/Developer/Projects/eulerb
   git clone git@github.com:NanoXD/fdpio.git ~/Developer/Projects/fdpio
   git clone git@github.com:NanoXD/fpoop.git ~/Developer/Projects/"Functional Programming for OO Programmer"
   git clone git@github.com:NanoXD/homebrew-cask.git ~/Developer/Projects/Caskroom/homebrew-cask
   git clone git@github.com:caskroom/homebrew-versions.git ~/Developer/Projects/Caskroom/homebrew-versions
   git clone git@github.com:NanoXD/mega_projects_rb.git ~/Developer/Projects/mega_projects_rb
-  git clone git@github.com:NanoXD/octopress.git ~/Developer/Projects/blog
-  git clone git@github.com:NanoXD/readlog.git ~/Developer/Projects/readlog
   git clone git@github.com:NanoXD/Reddit-Daily-Programmer.git ~/Developer/Projects/Reddit-Daily-Programmer
 
 fancy_echo "Downloading Automation Scripts"
   git clone git@github.com:NanoXD/laptop.git ~/Developer/Automation/laptop
-  git clone git@github.com:Alives/tmux-statusline.git ~/Developer/Tools/tmux-statusline
 
 fancy_echo "Downloading Railscast Downloader"
   git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
-  git clone git@github.com:Ball/nsscreencast-fetcher.git ~/Developer/Tools/nsscreencast-downloader
 
 fancy_echo "Downloading Xcode Plugins"
-  git clone git@github.com:macoscope/CodePilot.git ~/Developer/Tools/CodePilot
   git clone git@github.com:JugglerShu/XVim.git ~/Developer/Tools/XVim
-  git clone git@github.com:pvwoods/SwiftJson.git ~/Developer/Tools/SwiftJson
 
 fancy_echo "Creating folders for Go and Cheatsheets"
   mkdir -p ~/Developer/Code/{go,cheatsheets}
@@ -466,32 +394,6 @@ fancy_echo "Installing Go ctags parser"
 fancy_echo "Installing Heroku CLI"
   L=/usr/local/bin/hk && curl -sL -A "`uname -sp`" https://hk.heroku.com/hk.gz | zcat >$L && chmod +x $L
 ### end common-components/go
-
-fancy_echo "Installing themes for Atom"
-  ap atom-mac-theme
-  ap fizzy
-  ap spacegray-dark-ui
-
-fancy_echo "Installing vim mode"
-  ap vim-mode
-
-fancy_echo "Installing TravisCI status"
-  ap travis-ci-status
-
-fancy_echo "Installing Test Status"
-  ap test-status
-
-fancy_echo "Installing autocomplete for Atom"
-  ap autocomplete-plus
-  ap autocomplete-paths
-  ap autocomplete-snippets
-
-fancy_echo "Installing a color picker for Atom"
-  ap color-picker
-
-fancy_echo "Installing a linter for Atom"
-  ap atom-linter
-### end common-components/atom
 
 fancy_echo "Installing Alcatraz, the package manager for Xcode"
   mkdir -p ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;
@@ -522,17 +424,11 @@ fancy_echo "Trackpad: enable tap to click for this user and for the login screen
   defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
   defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-fancy_echo "Increase sound quality for Bluetooth headphones/headsets"
-  defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
 fancy_echo "Enable full keyboard access for all controls"
   defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 fancy_echo "Set a blazingly fast keyboard repeat rate"
   defaults write NSGlobalDomain KeyRepeat -int 0
-
-fancy_echo "Enable subpixel font rendering on non-Apple LCDs"
-  defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 fancy_echo "Show icons for hard drives, servers, and removable media on the desktop"
   defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true

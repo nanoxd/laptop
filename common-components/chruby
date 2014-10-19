@@ -1,3 +1,3 @@
-fancy_echo "Installing Chruby, a ruby version manager"
-  brew_install_or_upgrade 'https://raw.githubusercontent.com/JeanMertz/chruby-fish/master/homebrew/chruby-fish.rb'
+fancy_echo "Installing Fry, a ruby version manager"
+  brew_install_or_upgrade 'https://gist.githubusercontent.com/nanoxd/eb59666b8621ad6188c0/raw/d4affcf8a9241e0db29d1a33a3247b337f771ec0/fry.rb'
   brew_install_or_upgrade 'ruby-install'

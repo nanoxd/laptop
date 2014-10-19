@@ -35,9 +35,6 @@ fancy_echo "Installing ImageMagick, to crop and resize images ..."
 fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
   brew_install_or_upgrade 'qt'
 
-fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew_install_or_upgrade 'watch'
-
 fancy_echo "Installing tree, a recursive directory listing"
   brew_install_or_upgrade 'tree'
 
@@ -49,9 +46,6 @@ fancy_echo "Installing Mosh, a mobile shell"
 
 fancy_echo "Installing youtube-dl for video downloads"
   brew_install_or_upgrade 'youtube-dl'
-
-fancy_echo "Installing ifstat, a tool for network interfaces"
-  brew_install_or_upgrade 'ifstat'
 
 fancy_echo "Installing jq, a lightweight and flexible command-line JSON processor"
   brew_install_or_upgrade 'jq'

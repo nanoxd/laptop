@@ -21,6 +21,5 @@ common-components/default-gems
 mac-components/npm-environment
 mac-components/cask-general
 common-components/vim
-common-components/atom
 mac-components/xcode
 mac-components/default-settings

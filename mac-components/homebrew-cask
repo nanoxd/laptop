@@ -1,6 +1,3 @@
-fancy_echo "Installing Spacious"
-  installcask spacious
-
 fancy_echo "Installing Paw, a HTTP/REST API helper"
   installcask paw
 
@@ -10,38 +7,11 @@ fancy_echo "Installing Java"
 fancy_echo "Installing Doxie driver"
   installcask doxie
 
-fancy_echo "Installing Evernote for notes"
-  installcask evernote
-
-fancy_echo "Installing Google Hangouts"
-  installcask google-hangouts
-
 fancy_echo "Installing Spotify"
   installcask spotify
 
-fancy_echo "Installing Atom"
-  installcask atom
-
 fancy_echo "Installing HockeyApp, an application for Hockey"
   installcask hockeyapp
-
-fancy_echo "Installing WebP Quicklook Plugin"
-  installcask webp-quicklook
-
-fancy_echo "Installing other Quicklook Plugin"
-  installcask quicklook-csv
-  installcask qlcolorcode
-  installcask qlprettypatch
-  installcask quicklook-json
-  installcask qlmarkdown
-  installcask qlstephen
-  installcask qlcolorcode
-
-fancy_echo "Installing Asepsis, a smart solution for .DS_Store pollution"
-  installcask asepsis
-
-fancy_echo "Installing Trailer, a PR manager"
-  installcask trailer
 
 fancy_echo "Installing QuickRadar"
   installcask quickradar
@@ -61,4 +31,5 @@ fancy_echo "Installing Tower, a git GUI"
 fancy_echo "Installing Xscope"
   installcask xscope
 
-
+fancy_echo "Installing ImageOptim"
+  installcask imageoptim

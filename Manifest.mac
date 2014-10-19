@@ -24,6 +24,5 @@ mac-components/homebrew-cask
 common-components/projects
 common-components/vim
 common-components/go
-common-components/atom
 mac-components/xcode
 mac-components/default-settings

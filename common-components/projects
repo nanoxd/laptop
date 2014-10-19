@@ -1,28 +1,20 @@
 fancy_echo "Downloading Projects"
   mkdir -p ~/Developer/{Automation,Code,Courses,OSS,Projects,Sandbox,Tools}
-  git clone git@github.com:NanoXD/boxylib.git ~/Developer/Projects/boxylib
-  git clone git@github.com:NanoXD/eulerb.git ~/Developer/Projects/eulerb
   git clone git@github.com:NanoXD/fdpio.git ~/Developer/Projects/fdpio
   git clone git@github.com:NanoXD/fpoop.git ~/Developer/Projects/"Functional Programming for OO Programmer"
   git clone git@github.com:NanoXD/homebrew-cask.git ~/Developer/Projects/Caskroom/homebrew-cask
   git clone git@github.com:caskroom/homebrew-versions.git ~/Developer/Projects/Caskroom/homebrew-versions
   git clone git@github.com:NanoXD/mega_projects_rb.git ~/Developer/Projects/mega_projects_rb
-  git clone git@github.com:NanoXD/octopress.git ~/Developer/Projects/blog
-  git clone git@github.com:NanoXD/readlog.git ~/Developer/Projects/readlog
   git clone git@github.com:NanoXD/Reddit-Daily-Programmer.git ~/Developer/Projects/Reddit-Daily-Programmer
 
 fancy_echo "Downloading Automation Scripts"
   git clone git@github.com:NanoXD/laptop.git ~/Developer/Automation/laptop
-  git clone git@github.com:Alives/tmux-statusline.git ~/Developer/Tools/tmux-statusline
 
 fancy_echo "Downloading Railscast Downloader"
   git clone https://github.com/bayan/railscast-downloader.git ~/Developer/Tools/railscast-downloader
-  git clone git@github.com:Ball/nsscreencast-fetcher.git ~/Developer/Tools/nsscreencast-downloader
 
 fancy_echo "Downloading Xcode Plugins"
-  git clone git@github.com:macoscope/CodePilot.git ~/Developer/Tools/CodePilot
   git clone git@github.com:JugglerShu/XVim.git ~/Developer/Tools/XVim
-  git clone git@github.com:pvwoods/SwiftJson.git ~/Developer/Tools/SwiftJson
 
 fancy_echo "Creating folders for Go and Cheatsheets"
   mkdir -p ~/Developer/Code/{go,cheatsheets}
